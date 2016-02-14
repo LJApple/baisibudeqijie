@@ -32,6 +32,7 @@
 {
     [super layoutSubviews];
     
+    // 替换原来的布局
     CGFloat width = self.width;
     CGFloat height = self.height;
     

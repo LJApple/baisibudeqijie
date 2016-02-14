@@ -10,6 +10,12 @@
 
 @implementation UIView (LJExtension)
 
+- (void)setSize:(CGSize)size
+{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
 - (void)setWidth:(CGFloat)width
 {
     CGRect frame = self.frame;
@@ -36,6 +42,10 @@
     self.frame = frame;
 }
 
+- (CGSize)size
+{
+    return self.frame.size;
+}
 - (CGFloat)width
 {
     return self.frame.size.width;

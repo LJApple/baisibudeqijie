@@ -10,4 +10,12 @@
 #define PrefixHeader_pch
 
 #import "UIView+LJExtension.h"
+
+#ifdef DEBUG
+#define LJLog(...) NSLog(__VA_ARGS__)
+#else
+#define LJLog(...)
+#endif
+
+#define LJLogFunc LJLog(@"%s", __func__)
 #endif /* PrefixHeader_pch */
