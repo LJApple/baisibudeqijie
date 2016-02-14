@@ -20,6 +20,8 @@
 		57EB3E4E1C70AAC400325104 /* LJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E411C70AAC400325104 /* LJViewController.m */; };
 		57EB3E4F1C70AAC400325104 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E421C70AAC400325104 /* main.m */; };
 		57EB3E501C70AAC400325104 /* LJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E461C70AAC400325104 /* LJTabBar.m */; };
+		57EB3E531C70BEF900325104 /* LJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E521C70BEF900325104 /* LJNavigationController.m */; };
+		57EB3E561C70C02200325104 /* LJtestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E551C70C02200325104 /* LJtestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		57EB3E431C70AAC400325104 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		57EB3E451C70AAC400325104 /* LJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTabBar.h; sourceTree = "<group>"; };
 		57EB3E461C70AAC400325104 /* LJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTabBar.m; sourceTree = "<group>"; };
+		57EB3E511C70BEF900325104 /* LJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNavigationController.h; sourceTree = "<group>"; };
+		57EB3E521C70BEF900325104 /* LJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNavigationController.m; sourceTree = "<group>"; };
+		57EB3E541C70C02200325104 /* LJtestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJtestViewController.h; sourceTree = "<group>"; };
+		57EB3E551C70C02200325104 /* LJtestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJtestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +312,8 @@
 				57EB3E391C70AAC400325104 /* AppDelegate.m */,
 				57EB3E421C70AAC400325104 /* main.m */,
 				57EB3E431C70AAC400325104 /* PrefixHeader.pch */,
+				57EB3E541C70C02200325104 /* LJtestViewController.h */,
+				57EB3E551C70C02200325104 /* LJtestViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -326,6 +334,8 @@
 			children = (
 				57EB3E401C70AAC400325104 /* LJViewController.h */,
 				57EB3E411C70AAC400325104 /* LJViewController.m */,
+				57EB3E511C70BEF900325104 /* LJNavigationController.h */,
+				57EB3E521C70BEF900325104 /* LJNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -473,10 +483,12 @@
 			files = (
 				57EB3E4F1C70AAC400325104 /* main.m in Sources */,
 				57EB3E481C70AAC400325104 /* LJFriendTrendsViewController.m in Sources */,
+				57EB3E561C70C02200325104 /* LJtestViewController.m in Sources */,
 				57EB3E501C70AAC400325104 /* LJTabBar.m in Sources */,
 				57EB3E4A1C70AAC400325104 /* LJNewViewController.m in Sources */,
 				57EB3E4B1C70AAC400325104 /* AppDelegate.m in Sources */,
 				57EB3E491C70AAC400325104 /* LJMeViewController.m in Sources */,
+				57EB3E531C70BEF900325104 /* LJNavigationController.m in Sources */,
 				57EB3E4C1C70AAC400325104 /* UIBarButtonItem+LJExtension.m in Sources */,
 				57EB3E4D1C70AAC400325104 /* UIView+LJExtension.m in Sources */,
 				57EB3E471C70AAC400325104 /* LJEssenceViewController.m in Sources */,

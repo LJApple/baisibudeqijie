@@ -12,6 +12,7 @@
 #import "LJFriendTrendsViewController.h"
 #import "LJMeViewController.h"
 #import "LJTabBar.h"
+#import "LJNavigationController.h"
 
 @interface LJViewController ()
 
@@ -53,7 +54,7 @@
     [self addChildViewController:vc];
     
     // 包装一个导航控制器，添加导航控制为tabbarController的子控制器
-    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:vc];
+    LJNavigationController *navigation = [[LJNavigationController alloc] initWithRootViewController:vc];
     
     [navigation.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:navigation];
