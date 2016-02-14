@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "LJViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,10 +20,8 @@
     // 设置窗口
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    
-    // 设置根控制器
-    self.window.rootViewController = [[ViewController alloc] init];
-    
+        
+    self.window.rootViewController = [[LJViewController alloc] init];
     // 显示窗口
     [self.window makeKeyAndVisible];
     

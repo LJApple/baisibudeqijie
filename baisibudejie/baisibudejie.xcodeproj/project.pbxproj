@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		57DDCE571C6F711B00AD3331 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DDCE561C6F711B00AD3331 /* main.m */; };
 		57DDCE5A1C6F711B00AD3331 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DDCE591C6F711B00AD3331 /* AppDelegate.m */; };
-		57DDCE5D1C6F711B00AD3331 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DDCE5C1C6F711B00AD3331 /* ViewController.m */; };
 		57DDCE621C6F711B00AD3331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DDCE611C6F711B00AD3331 /* Assets.xcassets */; };
 		57DDCE701C6F711B00AD3331 /* baisibudejieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DDCE6F1C6F711B00AD3331 /* baisibudejieTests.m */; };
 		57DDCE7B1C6F711B00AD3331 /* baisibudejieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DDCE7A1C6F711B00AD3331 /* baisibudejieUITests.m */; };
+		57EB3E001C703BA000325104 /* LJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3DFF1C703BA000325104 /* LJViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +37,6 @@
 		57DDCE561C6F711B00AD3331 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57DDCE581C6F711B00AD3331 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		57DDCE591C6F711B00AD3331 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		57DDCE5B1C6F711B00AD3331 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		57DDCE5C1C6F711B00AD3331 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		57DDCE611C6F711B00AD3331 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57DDCE661C6F711B00AD3331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57DDCE6B1C6F711B00AD3331 /* baisibudejieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +45,8 @@
 		57DDCE761C6F711B00AD3331 /* baisibudejieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DDCE7A1C6F711B00AD3331 /* baisibudejieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = baisibudejieUITests.m; sourceTree = "<group>"; };
 		57DDCE7C1C6F711B00AD3331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57EB3DFE1C703BA000325104 /* LJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJViewController.h; sourceTree = "<group>"; };
+		57EB3DFF1C703BA000325104 /* LJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +99,9 @@
 			children = (
 				57DDCE581C6F711B00AD3331 /* AppDelegate.h */,
 				57DDCE591C6F711B00AD3331 /* AppDelegate.m */,
-				57DDCE5B1C6F711B00AD3331 /* ViewController.h */,
-				57DDCE5C1C6F711B00AD3331 /* ViewController.m */,
 				57DDCE551C6F711B00AD3331 /* Supporting Files */,
+				57EB3DFE1C703BA000325104 /* LJViewController.h */,
+				57EB3DFF1C703BA000325104 /* LJViewController.m */,
 			);
 			path = baisibudejie;
 			sourceTree = "<group>";
@@ -196,6 +196,7 @@
 		57DDCE4A1C6F711A00AD3331 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LJ;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "吕俊";
 				TargetAttributes = {
@@ -265,9 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57DDCE5D1C6F711B00AD3331 /* ViewController.m in Sources */,
 				57DDCE5A1C6F711B00AD3331 /* AppDelegate.m in Sources */,
 				57DDCE571C6F711B00AD3331 /* main.m in Sources */,
+				57EB3E001C703BA000325104 /* LJViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
