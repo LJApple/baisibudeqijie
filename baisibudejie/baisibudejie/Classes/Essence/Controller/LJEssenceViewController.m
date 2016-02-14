@@ -7,7 +7,6 @@
 //
 
 #import "LJEssenceViewController.h"
-#import "LJtestViewController.h"
 
 @interface LJEssenceViewController ()
 
@@ -34,7 +33,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    LJtestViewController *vc = [[LJtestViewController alloc] init];
+    UIViewController *vc = [[UIViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
     LJLog(@"%@", self.navigationController);
 }

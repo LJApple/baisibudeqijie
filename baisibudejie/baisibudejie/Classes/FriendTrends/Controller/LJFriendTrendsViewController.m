@@ -7,6 +7,7 @@
 //
 
 #import "LJFriendTrendsViewController.h"
+#import "LJRecommendViewController.h"
 
 @interface LJFriendTrendsViewController ()
 
@@ -28,6 +29,7 @@
 
 - (void) friendTrendsButtonClick
 {
-    LJLogFunc;
+    LJRecommendViewController *vc = [[LJRecommendViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

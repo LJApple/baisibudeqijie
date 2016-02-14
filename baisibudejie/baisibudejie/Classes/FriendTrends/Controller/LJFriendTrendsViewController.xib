@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LJFriendTrendsViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="7S2-S1-CAk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ugq-Xt-z00">
+                    <rect key="frame" x="276" y="181" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="6Wu-kT-mmJ"/>
+                        <constraint firstAttribute="width" constant="48" id="ATl-Ip-w4w"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xT7-8Q-JRI">
+                    <rect key="frame" x="150" y="269.5" width="300" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="3XB-JR-frl"/>
+                    </constraints>
+                    <string key="text">快快登录吧, 关注百思最in牛人
+好友动态让你过把瘾儿~
+欧耶~~~~!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgj-Ul-zVz">
+                    <rect key="frame" x="200" y="370" width="200" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="DTp-R6-kXD"/>
+                        <constraint firstAttribute="height" constant="35" id="EDu-Kg-6da"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="立即登陆注册">
+                        <color key="titleColor" red="1" green="0.14047431573606617" blue="0.19819951358167676" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xT7-8Q-JRI" firstAttribute="top" secondItem="Ugq-Xt-z00" secondAttribute="bottom" constant="40" id="0vZ-x5-RWu"/>
+                <constraint firstItem="Tgj-Ul-zVz" firstAttribute="top" secondItem="xT7-8Q-JRI" secondAttribute="bottom" constant="40" id="8mv-hu-fR7"/>
+                <constraint firstItem="xT7-8Q-JRI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JLG-Wb-OZN"/>
+                <constraint firstItem="Ugq-Xt-z00" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fDu-SA-ENn"/>
+                <constraint firstItem="xT7-8Q-JRI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jeO-MN-whg"/>
+                <constraint firstItem="Tgj-Ul-zVz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jfj-4L-fPf"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="header_cry_icon" width="48" height="48"/>
+    </resources>
+</document>

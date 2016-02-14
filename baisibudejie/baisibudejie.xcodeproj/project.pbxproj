@@ -21,7 +21,10 @@
 		57EB3E4F1C70AAC400325104 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E421C70AAC400325104 /* main.m */; };
 		57EB3E501C70AAC400325104 /* LJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E461C70AAC400325104 /* LJTabBar.m */; };
 		57EB3E531C70BEF900325104 /* LJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E521C70BEF900325104 /* LJNavigationController.m */; };
-		57EB3E561C70C02200325104 /* LJtestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E551C70C02200325104 /* LJtestViewController.m */; };
+		57EB3E5A1C70E51100325104 /* LJFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57EB3E591C70E51100325104 /* LJFriendTrendsViewController.xib */; };
+		57EB3E5E1C70E8D100325104 /* LJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E5C1C70E8D100325104 /* LJRecommendViewController.m */; };
+		57EB3E5F1C70E8D100325104 /* LJRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57EB3E5D1C70E8D100325104 /* LJRecommendViewController.xib */; };
+		FFB4B98DA5853A695BAFA136 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A798B9607982259855B3B7A2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +76,13 @@
 		57EB3E461C70AAC400325104 /* LJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTabBar.m; sourceTree = "<group>"; };
 		57EB3E511C70BEF900325104 /* LJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNavigationController.h; sourceTree = "<group>"; };
 		57EB3E521C70BEF900325104 /* LJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNavigationController.m; sourceTree = "<group>"; };
-		57EB3E541C70C02200325104 /* LJtestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJtestViewController.h; sourceTree = "<group>"; };
-		57EB3E551C70C02200325104 /* LJtestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJtestViewController.m; sourceTree = "<group>"; };
+		57EB3E591C70E51100325104 /* LJFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		57EB3E5B1C70E8D100325104 /* LJRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJRecommendViewController.h; sourceTree = "<group>"; };
+		57EB3E5C1C70E8D100325104 /* LJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJRecommendViewController.m; sourceTree = "<group>"; };
+		57EB3E5D1C70E8D100325104 /* LJRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJRecommendViewController.xib; sourceTree = "<group>"; };
+		87E2D513A27816DBF2A91CA0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A798B9607982259855B3B7A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79D4D0996EA53CF5252D509 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB4B98DA5853A695BAFA136 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +118,8 @@
 				57DDCE6E1C6F711B00AD3331 /* baisibudejieTests */,
 				57DDCE791C6F711B00AD3331 /* baisibudejieUITests */,
 				57DDCE531C6F711B00AD3331 /* Products */,
+				BF32DAC53FF57774E95E9B6E /* Pods */,
+				AC5554532429D9FB65C2E678 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +229,10 @@
 			children = (
 				57EB3E231C70AAC400325104 /* LJFriendTrendsViewController.h */,
 				57EB3E241C70AAC400325104 /* LJFriendTrendsViewController.m */,
+				57EB3E591C70E51100325104 /* LJFriendTrendsViewController.xib */,
+				57EB3E5B1C70E8D100325104 /* LJRecommendViewController.h */,
+				57EB3E5C1C70E8D100325104 /* LJRecommendViewController.m */,
+				57EB3E5D1C70E8D100325104 /* LJRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,8 +327,6 @@
 				57EB3E391C70AAC400325104 /* AppDelegate.m */,
 				57EB3E421C70AAC400325104 /* main.m */,
 				57EB3E431C70AAC400325104 /* PrefixHeader.pch */,
-				57EB3E541C70C02200325104 /* LJtestViewController.h */,
-				57EB3E551C70C02200325104 /* LJtestViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -349,6 +362,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AC5554532429D9FB65C2E678 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A798B9607982259855B3B7A2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF32DAC53FF57774E95E9B6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A79D4D0996EA53CF5252D509 /* Pods.debug.xcconfig */,
+				87E2D513A27816DBF2A91CA0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -356,9 +386,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57DDCE7F1C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejie" */;
 			buildPhases = (
+				875C63AA927419D2394E935A /* Check Pods Manifest.lock */,
 				57DDCE4E1C6F711A00AD3331 /* Sources */,
 				57DDCE4F1C6F711A00AD3331 /* Frameworks */,
 				57DDCE501C6F711A00AD3331 /* Resources */,
+				B3CC4A8106C4540AE74B2546 /* Embed Pods Frameworks */,
+				744C2B8C2C86F9B7947BAA02 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -456,6 +489,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EB3E5F1C70E8D100325104 /* LJRecommendViewController.xib in Resources */,
+				57EB3E5A1C70E51100325104 /* LJFriendTrendsViewController.xib in Resources */,
 				57DDCE621C6F711B00AD3331 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +511,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		744C2B8C2C86F9B7947BAA02 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		875C63AA927419D2394E935A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3CC4A8106C4540AE74B2546 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		57DDCE4E1C6F711A00AD3331 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -483,10 +566,10 @@
 			files = (
 				57EB3E4F1C70AAC400325104 /* main.m in Sources */,
 				57EB3E481C70AAC400325104 /* LJFriendTrendsViewController.m in Sources */,
-				57EB3E561C70C02200325104 /* LJtestViewController.m in Sources */,
 				57EB3E501C70AAC400325104 /* LJTabBar.m in Sources */,
 				57EB3E4A1C70AAC400325104 /* LJNewViewController.m in Sources */,
 				57EB3E4B1C70AAC400325104 /* AppDelegate.m in Sources */,
+				57EB3E5E1C70E8D100325104 /* LJRecommendViewController.m in Sources */,
 				57EB3E491C70AAC400325104 /* LJMeViewController.m in Sources */,
 				57EB3E531C70BEF900325104 /* LJNavigationController.m in Sources */,
 				57EB3E4C1C70AAC400325104 /* UIBarButtonItem+LJExtension.m in Sources */,
@@ -610,6 +693,7 @@
 		};
 		57DDCE801C6F711B00AD3331 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A79D4D0996EA53CF5252D509 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -625,6 +709,7 @@
 		};
 		57DDCE811C6F711B00AD3331 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E2D513A27816DBF2A91CA0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
