@@ -11,6 +11,7 @@
 #import "LJNewViewController.h"
 #import "LJFriendTrendsViewController.h"
 #import "LJMeViewController.h"
+#import "LJTabBar.h"
 
 @interface LJViewController ()
 
@@ -35,6 +36,10 @@
     [self setupChildVc:[[LJNewViewController alloc] init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     [self setupChildVc:[[LJFriendTrendsViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     [self setupChildVc:[[LJMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    
+    // 更换tabar
+    [self setValue:[[LJTabBar alloc] init] forKey:@"tabBar"];
+    
 }
 
 - (void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)imageName selectedImage:(NSString *)selectedImageName
