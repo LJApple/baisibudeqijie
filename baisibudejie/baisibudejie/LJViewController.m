@@ -28,7 +28,10 @@
     NSMutableDictionary *selectAtrr = [NSMutableDictionary dictionary];
     selectAtrr[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     selectAtrr[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-    [vc01.tabBarItem setTitleTextAttributes:selectAtrr forState:UIControlStateSelected];
+    
+    UITabBarItem *item = [UITabBarItem appearance];
+    [item setTitleTextAttributes:selectAtrr forState:UIControlStateNormal];
+    [item setTitleTextAttributes:selectAtrr forState:UIControlStateSelected];
     
     [self addChildViewController:vc01];
     
@@ -37,7 +40,6 @@
     vc02.tabBarItem.title = @"新帖";
     vc02.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
     vc02.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
-    [vc02.tabBarItem setTitleTextAttributes:selectAtrr forState:UIControlStateSelected];
 
     [self addChildViewController:vc02];
     
@@ -47,8 +49,7 @@
     vc03.tabBarItem.title = @"关注";
     vc03.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
     vc03.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
-    [vc03.tabBarItem setTitleTextAttributes:selectAtrr forState:UIControlStateSelected];
-
+    
     [self addChildViewController:vc03];
     
     UIViewController *vc04 = [[UIViewController alloc] init];
@@ -57,8 +58,6 @@
     vc04.tabBarItem.title = @"我";
     vc04.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
     vc04.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon"];
-    [vc04.tabBarItem setTitleTextAttributes:selectAtrr forState:UIControlStateSelected];
-
     [self addChildViewController:vc04];
 
 }
