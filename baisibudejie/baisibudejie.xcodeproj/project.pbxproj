@@ -13,6 +13,10 @@
 		57DDCE701C6F711B00AD3331 /* baisibudejieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DDCE6F1C6F711B00AD3331 /* baisibudejieTests.m */; };
 		57DDCE7B1C6F711B00AD3331 /* baisibudejieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DDCE7A1C6F711B00AD3331 /* baisibudejieUITests.m */; };
 		57EB3E001C703BA000325104 /* LJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3DFF1C703BA000325104 /* LJViewController.m */; };
+		57EB3E031C704B3700325104 /* LJEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E021C704B3700325104 /* LJEssenceViewController.m */; };
+		57EB3E061C704B4900325104 /* LJNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E051C704B4900325104 /* LJNewViewController.m */; };
+		57EB3E091C704B5A00325104 /* LJFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E081C704B5A00325104 /* LJFriendTrendsViewController.m */; };
+		57EB3E0C1C704B6600325104 /* LJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E0B1C704B6600325104 /* LJMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,14 @@
 		57DDCE7C1C6F711B00AD3331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57EB3DFE1C703BA000325104 /* LJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJViewController.h; sourceTree = "<group>"; };
 		57EB3DFF1C703BA000325104 /* LJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJViewController.m; sourceTree = "<group>"; };
+		57EB3E011C704B3700325104 /* LJEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJEssenceViewController.h; sourceTree = "<group>"; };
+		57EB3E021C704B3700325104 /* LJEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJEssenceViewController.m; sourceTree = "<group>"; };
+		57EB3E041C704B4900325104 /* LJNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNewViewController.h; sourceTree = "<group>"; };
+		57EB3E051C704B4900325104 /* LJNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNewViewController.m; sourceTree = "<group>"; };
+		57EB3E071C704B5A00325104 /* LJFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJFriendTrendsViewController.h; sourceTree = "<group>"; };
+		57EB3E081C704B5A00325104 /* LJFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJFriendTrendsViewController.m; sourceTree = "<group>"; };
+		57EB3E0A1C704B6600325104 /* LJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMeViewController.h; sourceTree = "<group>"; };
+		57EB3E0B1C704B6600325104 /* LJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,17 @@
 			children = (
 				57DDCE581C6F711B00AD3331 /* AppDelegate.h */,
 				57DDCE591C6F711B00AD3331 /* AppDelegate.m */,
-				57DDCE551C6F711B00AD3331 /* Supporting Files */,
 				57EB3DFE1C703BA000325104 /* LJViewController.h */,
 				57EB3DFF1C703BA000325104 /* LJViewController.m */,
+				57DDCE551C6F711B00AD3331 /* Supporting Files */,
+				57EB3E011C704B3700325104 /* LJEssenceViewController.h */,
+				57EB3E021C704B3700325104 /* LJEssenceViewController.m */,
+				57EB3E041C704B4900325104 /* LJNewViewController.h */,
+				57EB3E051C704B4900325104 /* LJNewViewController.m */,
+				57EB3E071C704B5A00325104 /* LJFriendTrendsViewController.h */,
+				57EB3E081C704B5A00325104 /* LJFriendTrendsViewController.m */,
+				57EB3E0A1C704B6600325104 /* LJMeViewController.h */,
+				57EB3E0B1C704B6600325104 /* LJMeViewController.m */,
 			);
 			path = baisibudejie;
 			sourceTree = "<group>";
@@ -266,9 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EB3E091C704B5A00325104 /* LJFriendTrendsViewController.m in Sources */,
 				57DDCE5A1C6F711B00AD3331 /* AppDelegate.m in Sources */,
+				57EB3E061C704B4900325104 /* LJNewViewController.m in Sources */,
+				57EB3E0C1C704B6600325104 /* LJMeViewController.m in Sources */,
 				57DDCE571C6F711B00AD3331 /* main.m in Sources */,
 				57EB3E001C703BA000325104 /* LJViewController.m in Sources */,
+				57EB3E031C704B3700325104 /* LJEssenceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

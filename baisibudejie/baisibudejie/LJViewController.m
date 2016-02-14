@@ -7,6 +7,10 @@
 //
 
 #import "LJViewController.h"
+#import "LJEssenceViewController.h"
+#import "LJNewViewController.h"
+#import "LJFriendTrendsViewController.h"
+#import "LJMeViewController.h"
 
 @interface LJViewController ()
 
@@ -16,50 +20,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // 添加子控制器
-    UIViewController *vc01 = [[UIViewController alloc] init];
-    vc01.view.backgroundColor = [UIColor redColor];
-    vc01.tabBarItem.title = @"精华";
-    vc01.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
-    vc01.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_essence_click_icon"];
     
     // 设置字体
     NSMutableDictionary *selectAtrr = [NSMutableDictionary dictionary];
     selectAtrr[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     selectAtrr[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-    
+    // 利用appearance统一设置
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:selectAtrr forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectAtrr forState:UIControlStateSelected];
     
-    [self addChildViewController:vc01];
-    
-    UIViewController *vc02 = [[UIViewController alloc] init];
-    vc02.view.backgroundColor = [UIColor blueColor];
-    vc02.tabBarItem.title = @"新帖";
-    vc02.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    vc02.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
-
-    [self addChildViewController:vc02];
-    
-    
-    UIViewController *vc03 = [[UIViewController alloc] init];
-    vc03.view.backgroundColor = [UIColor blackColor];
-    vc03.tabBarItem.title = @"关注";
-    vc03.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
-    vc03.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
-    
-    [self addChildViewController:vc03];
-    
-    UIViewController *vc04 = [[UIViewController alloc] init];
-    vc04.view.backgroundColor = [UIColor greenColor];
-    
-    vc04.tabBarItem.title = @"我";
-    vc04.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
-    vc04.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon"];
-    [self addChildViewController:vc04];
-
+    // 添加子控制器
+    [self setupChildVc:[[LJEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupChildVc:[[LJNewViewController alloc] init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    [self setupChildVc:[[LJFriendTrendsViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupChildVc:[[LJMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
 }
 
+- (void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)imageName selectedImage:(NSString *)selectedImageName
+{
+    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1];
+    vc.tabBarItem.title = title;
+    vc.tabBarItem.image = [UIImage imageNamed:imageName];
+    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImageName];
+    [self addChildViewController:vc];
+}
 @end
