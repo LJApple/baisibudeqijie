@@ -21,6 +21,9 @@
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
 
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightedImage:@"MainTagSubIconClick" target:self action:@selector(essenceButtonClick)];
+    
+    // 设置背景颜色
+    self.view.backgroundColor =  LJGlobalBg;
 }
 
 - (void)essenceButtonClick

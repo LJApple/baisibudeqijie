@@ -22,6 +22,8 @@
     
     // 设置左边的按钮
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highlightedImage:@"friendsRecommentIcon-click" target:self action:@selector(friendTrendsButtonClick)];
+    // 设置背景颜色
+   self.view.backgroundColor =  LJGlobalBg;
 }
 
 - (void) friendTrendsButtonClick

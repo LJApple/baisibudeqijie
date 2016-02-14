@@ -19,4 +19,9 @@
 #endif
 
 #define LJLogFunc LJLog(@"%s", __func__)
+
+
+#define LJRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0 alpha:1.0]
+#define LJGlobalBg LJRGBColor(223, 223, 223)
+
 #endif /* PrefixHeader_pch */

@@ -201,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				57EB3E221C70AAC400325104 /* Controller */,
-				57EB3E251C70AAC400325104 /* Essence */,
 				57EB3E291C70AAC400325104 /* Model */,
 				57EB3E2A1C70AAC400325104 /* View */,
 			);
@@ -215,37 +214,6 @@
 				57EB3E241C70AAC400325104 /* LJFriendTrendsViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		57EB3E251C70AAC400325104 /* Essence */ = {
-			isa = PBXGroup;
-			children = (
-				57EB3E261C70AAC400325104 /* Controller */,
-				57EB3E271C70AAC400325104 /* Model */,
-				57EB3E281C70AAC400325104 /* View */,
-			);
-			path = Essence;
-			sourceTree = "<group>";
-		};
-		57EB3E261C70AAC400325104 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		57EB3E271C70AAC400325104 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		57EB3E281C70AAC400325104 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		57EB3E291C70AAC400325104 /* Model */ = {

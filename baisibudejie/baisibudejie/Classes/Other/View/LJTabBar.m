@@ -19,6 +19,10 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        // 设置tabBar背景颜色
+        [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
+        
+        // 添加导航按钮
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];

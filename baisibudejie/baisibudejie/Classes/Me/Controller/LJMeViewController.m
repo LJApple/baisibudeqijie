@@ -29,6 +29,9 @@
                                                 settingButtonClick,
                                                 moonModeButtonClick
                                                 ];
+    
+    // 设置背景颜色
+    self.view.backgroundColor =  LJGlobalBg;
 }
 
 - (void)settingButtonClick

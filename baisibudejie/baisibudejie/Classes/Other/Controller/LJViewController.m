@@ -45,7 +45,8 @@
 - (void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)imageName selectedImage:(NSString *)selectedImageName
 {
     vc.navigationItem.title = title;
-    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1];
+    // 必须等点击之后再创建颜色，会创建控制器
+    //vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1];
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImageName];
@@ -53,6 +54,8 @@
     
     // 包装一个导航控制器，添加导航控制为tabbarController的子控制器
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [navigation.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:navigation];
 }
 @end
