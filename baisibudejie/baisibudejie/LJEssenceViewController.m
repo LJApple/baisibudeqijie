@@ -19,16 +19,11 @@
     
     // 设置导航栏内容
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    
-    UIButton *tagButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [tagButton setBackgroundImage:[UIImage imageNamed:@"MainTagSubIcon"] forState:UIControlStateNormal];
-    [tagButton setBackgroundImage:[UIImage imageNamed:@"MainTagSubIconClick"] forState:UIControlStateHighlighted];
-    tagButton.size = tagButton.currentBackgroundImage.size;
-    [tagButton addTarget:self  action:@selector(tagClick) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tagButton];
+
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightedImage:@"MainTagSubIconClick" target:self action:@selector(essenceButtonClick)];
 }
 
-- (void)tagClick
+- (void)essenceButtonClick
 {
     LJLogFunc;
 }

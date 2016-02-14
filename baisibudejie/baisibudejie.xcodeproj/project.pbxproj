@@ -19,6 +19,7 @@
 		57EB3E0C1C704B6600325104 /* LJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E0B1C704B6600325104 /* LJMeViewController.m */; };
 		57EB3E121C704F7600325104 /* LJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E111C704F7600325104 /* LJTabBar.m */; };
 		57EB3E151C70586B00325104 /* UIView+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E141C70586B00325104 /* UIView+LJExtension.m */; };
+		57EB3E191C70789800325104 /* UIBarButtonItem+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EB3E181C70789800325104 /* UIBarButtonItem+LJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		57EB3E131C70586B00325104 /* UIView+LJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LJExtension.h"; path = "../UIView+LJExtension.h"; sourceTree = "<group>"; };
 		57EB3E141C70586B00325104 /* UIView+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LJExtension.m"; path = "../UIView+LJExtension.m"; sourceTree = "<group>"; };
 		57EB3E161C7058AD00325104 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		57EB3E171C70789800325104 /* UIBarButtonItem+LJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LJExtension.h"; sourceTree = "<group>"; };
+		57EB3E181C70789800325104 /* UIBarButtonItem+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				57EB3E141C70586B00325104 /* UIView+LJExtension.m */,
 				57EB3E161C7058AD00325104 /* PrefixHeader.pch */,
 				57DDCE551C6F711B00AD3331 /* Supporting Files */,
+				57EB3E171C70789800325104 /* UIBarButtonItem+LJExtension.h */,
+				57EB3E181C70789800325104 /* UIBarButtonItem+LJExtension.m */,
 			);
 			path = baisibudejie;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				57DDCE5A1C6F711B00AD3331 /* AppDelegate.m in Sources */,
 				57EB3E061C704B4900325104 /* LJNewViewController.m in Sources */,
 				57EB3E151C70586B00325104 /* UIView+LJExtension.m in Sources */,
+				57EB3E191C70789800325104 /* UIBarButtonItem+LJExtension.m in Sources */,
 				57EB3E0C1C704B6600325104 /* LJMeViewController.m in Sources */,
 				57DDCE571C6F711B00AD3331 /* main.m in Sources */,
 				57EB3E001C703BA000325104 /* LJViewController.m in Sources */,

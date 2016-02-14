@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import "UIView+LJExtension.h"
+#import "UIBarButtonItem+LJExtension.h"
 
 #ifdef DEBUG
 #define LJLog(...) NSLog(__VA_ARGS__)

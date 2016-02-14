@@ -20,17 +20,10 @@
     // 设置导航栏标题
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     
-    UIButton *newTagButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [newTagButton setBackgroundImage:[UIImage imageNamed:@"MainTagSubIcon"] forState:UIControlStateNormal];
-    [newTagButton setBackgroundImage:[UIImage imageNamed:@"MainTagSubIconClick"] forState:UIControlStateHighlighted];
-    
-    newTagButton.size = newTagButton.currentBackgroundImage.size;
-    
-    [newTagButton addTarget:self action:@selector(newTagButton) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:newTagButton];
-}
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightedImage:@"MainTagSubIconClick" target:self action:@selector(newButtonClick)];
+    }
 
-- (void)newTagButton
+- (void)newButtonClick
 {
     LJLogFunc;
 }
