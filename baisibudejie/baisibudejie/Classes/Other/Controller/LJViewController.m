@@ -20,17 +20,24 @@
 
 @implementation LJViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+
++ (void)initialize
+{
     // 设置字体
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
+    attrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    
     NSMutableDictionary *selectAtrr = [NSMutableDictionary dictionary];
     selectAtrr[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     selectAtrr[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
     // 利用appearance统一设置
     UITabBarItem *item = [UITabBarItem appearance];
-    [item setTitleTextAttributes:selectAtrr forState:UIControlStateNormal];
+    [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectAtrr forState:UIControlStateSelected];
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     // 添加子控制器
     [self setupChildVc:[[LJEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
@@ -56,7 +63,6 @@
     // 包装一个导航控制器，添加导航控制为tabbarController的子控制器
     LJNavigationController *navigation = [[LJNavigationController alloc] initWithRootViewController:vc];
     
-    [navigation.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:navigation];
 }
 @end

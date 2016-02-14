@@ -10,9 +10,20 @@
 
 @implementation LJNavigationController
 
+/**
+ *  当第一次使用这个类的时候会调用
+ */
++ (void)initialize
+{
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
