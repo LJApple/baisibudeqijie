@@ -1,0 +1,13 @@
+//
+//  PrefixHeader.pch
+//  baisibudejie
+//
+//  Created by 吕俊 on 16/2/14.
+//  Copyright © 2016年 吕俊. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+LJExtension.h"
+#endif /* PrefixHeader_pch */
