@@ -19,6 +19,13 @@
 
 #define LJSelectCategory  self.categories[self.cateoryTableView.indexPathForSelectedRow.row]
 
+/*
+ CMD + CTRL + LEFT: 折叠
+ CMD + CTRL + RIGHT: 取消折叠
+ CMD + CTRL + TOP: 折叠全部函数
+ CMD + CTRL + BOTTOM: 取消全部函数折叠
+ CTRL + U: 取消全部折叠
+*/
 @interface LJRecommendViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *cateoryTableView;
 @property (weak, nonatomic) IBOutlet UITableView *userTableVIew;
@@ -26,9 +33,21 @@
 /** 左边表格的数据*/
 @property (nonatomic, strong) NSArray *categories;
 
+@property (nonatomic, strong)NSMutableDictionary *params;
+
+@property (nonatomic, strong)AFHTTPSessionManager *manager;
+
 @end
 
 @implementation LJRecommendViewController
+
+- (AFHTTPSessionManager *)manager
+{
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 static NSString * const LJCategoryID = @"category";
 static NSString * const LJUsersID = @"users";
@@ -41,23 +60,32 @@ static NSString * const LJUsersID = @"users";
      // 刷新控件
     [self setupRefresh];
    
+    // 发送请求
+    [self sendRequest];
+    
+}
+- (void)sendRequest
+{
     // 显示指示器
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
-    
+
     // 发送请求
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"category";
     params[@"c"] = @"subscribe";
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
         // 服务器返回的JSON数据
         self.categories = [LJRecommentCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-    // 刷新表格
+        // 刷新表格
         [self.cateoryTableView reloadData];
         // 默认首选中行
         [self.cateoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+        
+        // 让用户进入下拉刷新状态
+        [self.userTableVIew.mj_header beginRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         // 显示失败信息
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
@@ -83,16 +111,25 @@ static NSString * const LJUsersID = @"users";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(re.id);
     params[@"next_page"] = @(re.currentPage);
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    self.params = params;
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+      
         // 左边列表的数据
         NSArray *users = [LJUserRecomendModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
+
+        // 解决下拉刷新数据重复的问题
+        [re.users removeAllObjects];
         
         [re.users addObjectsFromArray:users];
-        LJLog(@"%@", responseObject);
+        // LJLog(@"%@", responseObject);
         
         // 保存总数
         re.total = [responseObject[@"total"] integerValue];
+        
+        // 解决重复请求,不是最后一次
+        if (self.params != params)return ;
+
         // 刷行右边的表格
         [self.userTableVIew reloadData];
         // 结束刷新
@@ -104,6 +141,7 @@ static NSString * const LJUsersID = @"users";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         // 提醒加载失败
         [SVProgressHUD showErrorWithStatus:@"加载失败"];
+        
         [self.userTableVIew.mj_header endRefreshing];
     }];
 
@@ -118,13 +156,19 @@ static NSString * const LJUsersID = @"users";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @([LJSelectCategory id]);
     params[@"page"] = @(++re.currentPage);
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    self.params = params;
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+       
         // 左边列表的数据
         NSArray *users = [LJUserRecomendModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         [re.users addObjectsFromArray:users];
+        
+        // 如果发现最后一次的请求和临时创建地是否是同一个
+        if (self.params != params) return ;
         
         [self.userTableVIew reloadData];
         // 让底部提醒结束刷行
@@ -201,6 +245,9 @@ static NSString * const LJUsersID = @"users";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // 结束刷新,解决连续点击数据出现的问题
+    [self.userTableVIew.mj_header endRefreshing];
+    [self.userTableVIew.mj_footer endRefreshing];
     
     LJRecommentCategory *re = self.categories[indexPath.row];
     
@@ -211,9 +258,15 @@ static NSString * const LJUsersID = @"users";
     } else  {
         // 赶紧刷新表格不让用户看到残留数据
         [self.userTableVIew reloadData];
-        
         //进入下拉刷新状态
         [self.userTableVIew.mj_header beginRefreshing];
     }
+}
+
+#pragma mark -控制器的销毁
+- (void) dealloc
+{
+    // 停止所有操作,当控制器死了
+    [self.manager.operationQueue cancelAllOperations];
 }
 @end
