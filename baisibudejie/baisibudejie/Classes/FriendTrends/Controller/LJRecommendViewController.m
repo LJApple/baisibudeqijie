@@ -13,28 +13,29 @@
 #import "LJCategoryTableViewCell.h"
 #import <MJExtension.h>
 #import "LJRecommentCategory.h"
+#import "LJUserRecomendModel.h"
+#import "LJUserTableViewCell.h"
 
 @interface LJRecommendViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *cateoryTableView;
+@property (weak, nonatomic) IBOutlet UITableView *userTableVIew;
 
 /** 左边表格的数据*/
 @property (nonatomic, strong) NSArray *categories;
+
+/** 右边用户表格的数据*/
+@property (nonatomic, strong) NSArray *users;
 @end
 
 @implementation LJRecommendViewController
 
 static NSString * const LJCategoryID = @"category";
+static NSString * const LJUsersID = @"users";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 注册
-    [self.cateoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LJCategoryTableViewCell class]) bundle: nil] forCellReuseIdentifier:LJCategoryID];
     
-    self.title = @"推荐关注";
-    
-    // 设置背景颜色
-    self.view.backgroundColor = LJGlobalBg;
-    
+    [self setUp];
     // 显示指示器
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
@@ -55,17 +56,64 @@ static NSString * const LJCategoryID = @"category";
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];
 }
+
+- (void)setUp
+{
+    // 注册
+    [self.cateoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LJCategoryTableViewCell class]) bundle: nil] forCellReuseIdentifier:LJCategoryID];
+    [self.userTableVIew registerNib:[UINib nibWithNibName:NSStringFromClass([LJUserTableViewCell class]) bundle:nil] forCellReuseIdentifier:LJUsersID];
+    
+    self.userTableVIew.rowHeight = 70;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.cateoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.userTableVIew.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.cateoryTableView.contentInset = self.userTableVIew.contentInset;
+    self.title = @"推荐关注";
+    // 设置背景颜色
+    self.view.backgroundColor = LJGlobalBg;
+}
 #pragma mark - <UITableViewDateSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.categories.count;
+    if (tableView == self.cateoryTableView) {
+        return self.categories.count;
+    } else  {
+        return self.users.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LJCategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LJCategoryID];
+    if (tableView == self.cateoryTableView) {
+        LJCategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LJCategoryID];
+        
+        cell.category = self.categories[indexPath.row];
+        return cell;
+    } else {
+        LJUserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LJUsersID];
+        cell.users = self.users[indexPath.row];
+        NSLog(@"%@", cell.users);
+        return cell;
+    }
+}
+
+#pragma mark - <UITableViewDelegate>
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LJRecommentCategory *recomend = self.categories[indexPath.row];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(recomend.id);
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.users = [LJUserRecomendModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
     
-    cell.category = self.categories[indexPath.row];
-    return cell;
+        [self.userTableVIew reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载失败"];
+    }];
 }
 @end
