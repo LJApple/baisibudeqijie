@@ -15,4 +15,5 @@
 @property (nonatomic, assign) NSInteger fans_count;
 /** 用户名称*/
 @property (nonatomic, copy) NSString * screen_name;
+
 @end

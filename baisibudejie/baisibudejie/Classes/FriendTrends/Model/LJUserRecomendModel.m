@@ -10,4 +10,5 @@
 
 @implementation LJUserRecomendModel
 
+
 @end

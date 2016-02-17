@@ -23,8 +23,6 @@
 /** 左边表格的数据*/
 @property (nonatomic, strong) NSArray *categories;
 
-/** 右边用户表格的数据*/
-@property (nonatomic, strong) NSArray *users;
 @end
 
 @implementation LJRecommendViewController
@@ -78,7 +76,8 @@ static NSString * const LJUsersID = @"users";
     if (tableView == self.cateoryTableView) {
         return self.categories.count;
     } else  {
-        return self.users.count;
+        LJRecommentCategory *re = self.categories[self.cateoryTableView.indexPathForSelectedRow.row];
+        return re.users.count;
     }
 }
 
@@ -91,8 +90,8 @@ static NSString * const LJUsersID = @"users";
         return cell;
     } else {
         LJUserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LJUsersID];
-        cell.users = self.users[indexPath.row];
-        NSLog(@"%@", cell.users);
+        LJRecommentCategory *re = self.categories[self.cateoryTableView.indexPathForSelectedRow.row];
+        cell.users = re.users[indexPath.row];
         return cell;
     }
 }
@@ -101,19 +100,28 @@ static NSString * const LJUsersID = @"users";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LJRecommentCategory *recomend = self.categories[indexPath.row];
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(recomend.id);
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        self.users = [LJUserRecomendModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
     
+    LJRecommentCategory *re = self.categories[indexPath.row];
+    
+    if (re.users.count) {
+        // 显示原来的数据
         [self.userTableVIew reloadData];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"加载失败"];
-    }];
+    } else  {
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        params[@"a"] = @"list";
+        params[@"c"] = @"subscribe";
+        params[@"category_id"] = @(re.id);
+        [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            // 左边列表的数据
+            NSArray *users = [LJUserRecomendModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            
+            [re.users addObjectsFromArray:users];
+            [self.userTableVIew reloadData];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [SVProgressHUD showErrorWithStatus:@"加载失败"];
+        }];
+    }
 }
 @end
