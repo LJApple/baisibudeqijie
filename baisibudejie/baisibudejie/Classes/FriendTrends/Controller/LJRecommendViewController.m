@@ -67,7 +67,46 @@ static NSString * const LJUsersID = @"users";
 #pragma setupRefresh
 - (void)setupRefresh
 {
+    self.userTableVIew.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
     self.userTableVIew.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUser)];
+}
+#pragma 加载新数据
+- (void)loadNewUsers
+{
+    LJRecommentCategory *re = LJSelectCategory;
+    // 设置当前页码
+    re.currentPage = 1;
+    
+    // 发送请求
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(re.id);
+    params[@"next_page"] = @(re.currentPage);
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        // 左边列表的数据
+        NSArray *users = [LJUserRecomendModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        
+        [re.users addObjectsFromArray:users];
+        LJLog(@"%@", responseObject);
+        
+        // 保存总数
+        re.total = [responseObject[@"total"] integerValue];
+        // 刷行右边的表格
+        [self.userTableVIew reloadData];
+        // 结束刷新
+        [self.userTableVIew.mj_header endRefreshing];
+        
+        // 判断下拉刷新是否加载完毕
+        [self checkOutRefresh];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        // 提醒加载失败
+        [SVProgressHUD showErrorWithStatus:@"加载失败"];
+        [self.userTableVIew.mj_header endRefreshing];
+    }];
+
 }
 
 - (void)loadMoreUser {
@@ -102,6 +141,7 @@ static NSString * const LJUsersID = @"users";
 {
     LJRecommentCategory *re = LJSelectCategory;
     if (re.users.count == re.total) {
+        // 全部数据已经加载完毕
         [self.userTableVIew.mj_footer endRefreshingWithNoMoreData];
     } else {
         [self.userTableVIew.mj_footer endRefreshing];
@@ -135,6 +175,9 @@ static NSString * const LJUsersID = @"users";
         NSInteger count = [LJSelectCategory users].count ;
         // 每次都刷新右边时，控制footer显示或则隐藏
         self.userTableVIew.mj_footer.hidden = (count == 0);
+        
+        // 让底部控件结束刷新
+        [self checkOutRefresh];
         return count;
     }
 }
@@ -161,37 +204,16 @@ static NSString * const LJUsersID = @"users";
     
     LJRecommentCategory *re = self.categories[indexPath.row];
     
+    //[self.userTableVIew.mj_footer  endRefreshingWithNoMoreData];
     if (re.users.count) {
         // 显示原来的数据
         [self.userTableVIew reloadData];
     } else  {
         // 赶紧刷新表格不让用户看到残留数据
         [self.userTableVIew reloadData];
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        params[@"a"] = @"list";
-        params[@"c"] = @"subscribe";
-        params[@"category_id"] = @(re.id);
-        params[@"next_page"] = @(re.currentPage);
-        [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            // 左边列表的数据
-            NSArray *users = [LJUserRecomendModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-            
-            // 设置当前页码
-            re.currentPage = 1;
-            [re.users addObjectsFromArray:users];
-            LJLog(@"%@", responseObject);
-            
-            // 保存总数
-            re.total = [responseObject[@"total"] integerValue];
-            // 刷行右边的表格
-            [self.userTableVIew reloadData];
-            // 检查刷新
-            [self checkOutRefresh];
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            [SVProgressHUD showErrorWithStatus:@"加载失败"];
-        }];
+        
+        //进入下拉刷新状态
+        [self.userTableVIew.mj_header beginRefreshing];
     }
 }
 @end
