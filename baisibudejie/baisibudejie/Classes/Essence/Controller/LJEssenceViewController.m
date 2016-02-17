@@ -7,6 +7,7 @@
 //
 
 #import "LJEssenceViewController.h"
+#import "LJRecomendTagsTableViewController.h"
 
 @interface LJEssenceViewController ()
 
@@ -28,13 +29,7 @@
 
 - (void)essenceButtonClick
 {
-    LJLogFunc;
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    UIViewController *vc = [[UIViewController alloc] init];
+    LJRecomendTagsTableViewController *vc = [[LJRecomendTagsTableViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
-    LJLog(@"%@", self.navigationController);
 }
 @end

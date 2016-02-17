@@ -8,7 +8,7 @@
 
 #import "LJUserTableViewCell.h"
 #import "LJUserRecomendModel.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import <UIImageView+WebCache.h>
 
 @interface LJUserTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;

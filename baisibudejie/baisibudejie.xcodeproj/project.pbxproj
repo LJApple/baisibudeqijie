@@ -11,6 +11,10 @@
 		571529921C72B434005F7107 /* LJRecommentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 571529911C72B434005F7107 /* LJRecommentCategory.m */; };
 		571529971C72B992005F7107 /* LJCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 571529951C72B992005F7107 /* LJCategoryTableViewCell.m */; };
 		571529981C72B992005F7107 /* LJCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571529961C72B992005F7107 /* LJCategoryTableViewCell.xib */; };
+		5766BFF01C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766BFEF1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m */; };
+		5766BFF31C74B252003EF8C1 /* LJRecomendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766BFF21C74B252003EF8C1 /* LJRecomendTags.m */; };
+		5766BFF71C74B64B003EF8C1 /* LJRecomentTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766BFF51C74B64B003EF8C1 /* LJRecomentTagsCell.m */; };
+		5766BFF81C74B64B003EF8C1 /* LJRecomentTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5766BFF61C74B64B003EF8C1 /* LJRecomentTagsCell.xib */; };
 		5771676A1C731A6B00BB62EB /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 577167691C731A6B00BB62EB /* Foundation+Log.m */; };
 		57DC77A11C742DB50019A4DA /* LJUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC779F1C742DB50019A4DA /* LJUserTableViewCell.m */; };
 		57DC77A21C742DB50019A4DA /* LJUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57DC77A01C742DB50019A4DA /* LJUserTableViewCell.xib */; };
@@ -58,6 +62,13 @@
 		571529941C72B992005F7107 /* LJCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCategoryTableViewCell.h; sourceTree = "<group>"; };
 		571529951C72B992005F7107 /* LJCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCategoryTableViewCell.m; sourceTree = "<group>"; };
 		571529961C72B992005F7107 /* LJCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		5766BFEE1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJRecomendTagsTableViewController.h; sourceTree = "<group>"; };
+		5766BFEF1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJRecomendTagsTableViewController.m; sourceTree = "<group>"; };
+		5766BFF11C74B252003EF8C1 /* LJRecomendTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJRecomendTags.h; path = baisibudejie/Classes/Essence/Controller/LJRecomendTags.h; sourceTree = SOURCE_ROOT; };
+		5766BFF21C74B252003EF8C1 /* LJRecomendTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJRecomendTags.m; path = baisibudejie/Classes/Essence/Controller/LJRecomendTags.m; sourceTree = SOURCE_ROOT; };
+		5766BFF41C74B64B003EF8C1 /* LJRecomentTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJRecomentTagsCell.h; path = baisibudejie/Classes/Essence/Controller/LJRecomentTagsCell.h; sourceTree = SOURCE_ROOT; };
+		5766BFF51C74B64B003EF8C1 /* LJRecomentTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJRecomentTagsCell.m; path = baisibudejie/Classes/Essence/Controller/LJRecomentTagsCell.m; sourceTree = SOURCE_ROOT; };
+		5766BFF61C74B64B003EF8C1 /* LJRecomentTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJRecomentTagsCell.xib; path = baisibudejie/Classes/Essence/Controller/LJRecomentTagsCell.xib; sourceTree = SOURCE_ROOT; };
 		577167691C731A6B00BB62EB /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		57D067EE1C72C50900219C23 /* baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067EF1C72C50900219C23 /* baisibudejieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +225,8 @@
 			children = (
 				57EB3E1D1C70AAC400325104 /* LJEssenceViewController.h */,
 				57EB3E1E1C70AAC400325104 /* LJEssenceViewController.m */,
+				5766BFEE1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.h */,
+				5766BFEF1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +234,8 @@
 		57EB3E1F1C70AAC400325104 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5766BFF11C74B252003EF8C1 /* LJRecomendTags.h */,
+				5766BFF21C74B252003EF8C1 /* LJRecomendTags.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +243,9 @@
 		57EB3E201C70AAC400325104 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5766BFF41C74B64B003EF8C1 /* LJRecomentTagsCell.h */,
+				5766BFF51C74B64B003EF8C1 /* LJRecomentTagsCell.m */,
+				5766BFF61C74B64B003EF8C1 /* LJRecomentTagsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,6 +531,7 @@
 				57EB3E5F1C70E8D100325104 /* LJRecommendViewController.xib in Resources */,
 				57EB3E5A1C70E51100325104 /* LJFriendTrendsViewController.xib in Resources */,
 				57DDCE621C6F711B00AD3331 /* Assets.xcassets in Resources */,
+				5766BFF81C74B64B003EF8C1 /* LJRecomentTagsCell.xib in Resources */,
 				571529981C72B992005F7107 /* LJCategoryTableViewCell.xib in Resources */,
 				57DC77A21C742DB50019A4DA /* LJUserTableViewCell.xib in Resources */,
 			);
@@ -599,9 +618,12 @@
 				57EB3E531C70BEF900325104 /* LJNavigationController.m in Sources */,
 				57EB3E4C1C70AAC400325104 /* UIBarButtonItem+LJExtension.m in Sources */,
 				57EB3E4D1C70AAC400325104 /* UIView+LJExtension.m in Sources */,
+				5766BFF31C74B252003EF8C1 /* LJRecomendTags.m in Sources */,
+				5766BFF71C74B64B003EF8C1 /* LJRecomentTagsCell.m in Sources */,
 				5771676A1C731A6B00BB62EB /* Foundation+Log.m in Sources */,
 				571529921C72B434005F7107 /* LJRecommentCategory.m in Sources */,
 				57DC77A51C7432670019A4DA /* LJUserRecomendModel.m in Sources */,
+				5766BFF01C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m in Sources */,
 				57EB3E471C70AAC400325104 /* LJEssenceViewController.m in Sources */,
 				57EB3E4E1C70AAC400325104 /* LJViewController.m in Sources */,
 			);
