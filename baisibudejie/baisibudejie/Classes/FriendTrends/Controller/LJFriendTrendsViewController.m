@@ -8,6 +8,7 @@
 
 #import "LJFriendTrendsViewController.h"
 #import "LJRecommendViewController.h"
+#import "LJLoginRigsterViewController.h"
 
 @interface LJFriendTrendsViewController ()
 
@@ -31,5 +32,10 @@
 {
     LJRecommendViewController *vc = [[LJRecommendViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)loginClick:(id)sender {
+
+    LJLoginRigsterViewController *login = [[LJLoginRigsterViewController alloc] init];
+    [self presentViewController:login animated:YES completion:nil];
 }
 @end
