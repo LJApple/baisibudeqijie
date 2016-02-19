@@ -11,6 +11,7 @@
 		571006831C75B76F00EDAE20 /* LJLoginRigsterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571006811C75B76F00EDAE20 /* LJLoginRigsterViewController.m */; };
 		571006841C75B76F00EDAE20 /* LJLoginRigsterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571006821C75B76F00EDAE20 /* LJLoginRigsterViewController.xib */; };
 		571006871C75C12B00EDAE20 /* LJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 571006861C75C12B00EDAE20 /* LJVerticalButton.m */; };
+		5710068A1C76AC8600EDAE20 /* LJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 571006891C76AC8600EDAE20 /* LJTextField.m */; };
 		571529921C72B434005F7107 /* LJRecommentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 571529911C72B434005F7107 /* LJRecommentCategory.m */; };
 		571529971C72B992005F7107 /* LJCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 571529951C72B992005F7107 /* LJCategoryTableViewCell.m */; };
 		571529981C72B992005F7107 /* LJCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571529961C72B992005F7107 /* LJCategoryTableViewCell.xib */; };
@@ -64,6 +65,8 @@
 		571006821C75B76F00EDAE20 /* LJLoginRigsterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLoginRigsterViewController.xib; sourceTree = "<group>"; };
 		571006851C75C12B00EDAE20 /* LJVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJVerticalButton.h; sourceTree = "<group>"; };
 		571006861C75C12B00EDAE20 /* LJVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJVerticalButton.m; sourceTree = "<group>"; };
+		571006881C76AC8600EDAE20 /* LJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTextField.h; sourceTree = "<group>"; };
+		571006891C76AC8600EDAE20 /* LJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTextField.m; sourceTree = "<group>"; };
 		571529901C72B434005F7107 /* LJRecommentCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJRecommentCategory.h; sourceTree = "<group>"; };
 		571529911C72B434005F7107 /* LJRecommentCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJRecommentCategory.m; sourceTree = "<group>"; };
 		571529931C72B777005F7107 /* LJRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJRecommendViewController.h; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 				57DC77A01C742DB50019A4DA /* LJUserTableViewCell.xib */,
 				571006851C75C12B00EDAE20 /* LJVerticalButton.h */,
 				571006861C75C12B00EDAE20 /* LJVerticalButton.m */,
+				571006881C76AC8600EDAE20 /* LJTextField.h */,
+				571006891C76AC8600EDAE20 /* LJTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -622,6 +627,7 @@
 			files = (
 				57EB3E4F1C70AAC400325104 /* main.m in Sources */,
 				57EB3E481C70AAC400325104 /* LJFriendTrendsViewController.m in Sources */,
+				5710068A1C76AC8600EDAE20 /* LJTextField.m in Sources */,
 				57EB3E501C70AAC400325104 /* LJTabBar.m in Sources */,
 				57EB3E4A1C70AAC400325104 /* LJNewViewController.m in Sources */,
 				57EB3E4B1C70AAC400325104 /* AppDelegate.m in Sources */,
