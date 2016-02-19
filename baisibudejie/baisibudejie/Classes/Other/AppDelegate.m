@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LJViewController.h"
+#import "LJPushGuide.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,7 @@
     // 显示窗口
     [self.window makeKeyAndVisible];
     
+    [LJPushGuide showPushguide];
     return YES;
 }
 
