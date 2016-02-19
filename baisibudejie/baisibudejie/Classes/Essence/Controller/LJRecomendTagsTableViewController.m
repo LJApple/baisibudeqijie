@@ -24,7 +24,7 @@ static NSString * const LJRecomendTagID = @"tags";
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    // 初始化
+    // 初始标签
     [self setUpRecomendTags];
     
     [self loadRecomendTags];
