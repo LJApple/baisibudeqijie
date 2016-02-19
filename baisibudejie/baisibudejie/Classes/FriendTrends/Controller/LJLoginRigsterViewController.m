@@ -9,8 +9,6 @@
 #import "LJLoginRigsterViewController.h"
 
 @interface LJLoginRigsterViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *placeHolder;
-
 @end
 
 @implementation LJLoginRigsterViewController
@@ -18,9 +16,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:@"手机号"];
-    [attr setAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} range:NSMakeRange(0, 3)];
-    self.placeHolder.attributedPlaceholder = attr;
+//    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:@"手机号"];
+//    [attr setAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} range:NSMakeRange(0, 3)];
+//    self.placeHolder.attributedPlaceholder = attr;
 }
 
 - (void)didReceiveMemoryWarning {
