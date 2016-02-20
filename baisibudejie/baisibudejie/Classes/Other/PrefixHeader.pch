@@ -11,6 +11,7 @@
 
 #import "UIView+LJExtension.h"
 #import "UIBarButtonItem+LJExtension.h"
+#import "LJConst.h"
 
 #ifdef DEBUG
 #define LJLog(...) NSLog(__VA_ARGS__)

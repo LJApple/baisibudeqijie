@@ -27,6 +27,8 @@
 		579A679A1C7804A40078F80F /* LJVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67991C7804A40078F80F /* LJVoiceViewController.m */; };
 		579A679D1C7804BD0078F80F /* LJPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A679C1C7804BD0078F80F /* LJPictureViewController.m */; };
 		579A67A01C78051E0078F80F /* LJStoryTellingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A679F1C78051E0078F80F /* LJStoryTellingViewController.m */; };
+		579A67A61C7835950078F80F /* LJTopics.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67A51C7835950078F80F /* LJTopics.m */; };
+		579A67AC1C785B110078F80F /* LJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67AB1C785B110078F80F /* LJConst.m */; };
 		57DC77A11C742DB50019A4DA /* LJUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC779F1C742DB50019A4DA /* LJUserTableViewCell.m */; };
 		57DC77A21C742DB50019A4DA /* LJUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57DC77A01C742DB50019A4DA /* LJUserTableViewCell.xib */; };
 		57DC77A51C7432670019A4DA /* LJUserRecomendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC77A41C7432670019A4DA /* LJUserRecomendModel.m */; };
@@ -101,6 +103,10 @@
 		579A679C1C7804BD0078F80F /* LJPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJPictureViewController.m; sourceTree = "<group>"; };
 		579A679E1C78051E0078F80F /* LJStoryTellingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJStoryTellingViewController.h; sourceTree = "<group>"; };
 		579A679F1C78051E0078F80F /* LJStoryTellingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJStoryTellingViewController.m; sourceTree = "<group>"; };
+		579A67A41C7835950078F80F /* LJTopics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJTopics.h; path = baisibudejie/Classes/Essence/Controller/LJTopics.h; sourceTree = SOURCE_ROOT; };
+		579A67A51C7835950078F80F /* LJTopics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJTopics.m; path = baisibudejie/Classes/Essence/Controller/LJTopics.m; sourceTree = SOURCE_ROOT; };
+		579A67AA1C785B110078F80F /* LJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJConst.h; sourceTree = "<group>"; };
+		579A67AB1C785B110078F80F /* LJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJConst.m; sourceTree = "<group>"; };
 		57D067EE1C72C50900219C23 /* baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067EF1C72C50900219C23 /* baisibudejieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067F01C72C50900219C23 /* baisibudejieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,6 +283,8 @@
 			children = (
 				5766BFF11C74B252003EF8C1 /* LJRecomendTags.h */,
 				5766BFF21C74B252003EF8C1 /* LJRecomendTags.m */,
+				579A67A41C7835950078F80F /* LJTopics.h */,
+				579A67A51C7835950078F80F /* LJTopics.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,6 +430,8 @@
 				57EB3E421C70AAC400325104 /* main.m */,
 				577167691C731A6B00BB62EB /* Foundation+Log.m */,
 				57EB3E431C70AAC400325104 /* PrefixHeader.pch */,
+				579A67AA1C785B110078F80F /* LJConst.h */,
+				579A67AB1C785B110078F80F /* LJConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -671,6 +681,7 @@
 				57EB3E5E1C70E8D100325104 /* LJRecommendViewController.m in Sources */,
 				571006871C75C12B00EDAE20 /* LJVerticalButton.m in Sources */,
 				57EB3E491C70AAC400325104 /* LJMeViewController.m in Sources */,
+				579A67AC1C785B110078F80F /* LJConst.m in Sources */,
 				57DC77A11C742DB50019A4DA /* LJUserTableViewCell.m in Sources */,
 				579A679A1C7804A40078F80F /* LJVoiceViewController.m in Sources */,
 				57EB3E531C70BEF900325104 /* LJNavigationController.m in Sources */,
@@ -682,6 +693,7 @@
 				5771676A1C731A6B00BB62EB /* Foundation+Log.m in Sources */,
 				579A67A01C78051E0078F80F /* LJStoryTellingViewController.m in Sources */,
 				571529921C72B434005F7107 /* LJRecommentCategory.m in Sources */,
+				579A67A61C7835950078F80F /* LJTopics.m in Sources */,
 				57DC77A51C7432670019A4DA /* LJUserRecomendModel.m in Sources */,
 				5710068D1C76C5F500EDAE20 /* LJPushGuide.m in Sources */,
 				579A67941C7804590078F80F /* LJAllViewController.m in Sources */,

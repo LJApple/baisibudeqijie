@@ -64,6 +64,12 @@ static NSString * const LJUsersID = @"users";
     [self sendRequest];
     
 }
+#pragma setupRefresh
+- (void)setupRefresh
+{
+    self.userTableVIew.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
+    self.userTableVIew.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUser)];
+}
 - (void)sendRequest
 {
     // 显示指示器
@@ -92,12 +98,7 @@ static NSString * const LJUsersID = @"users";
     }];
 }
 
-#pragma setupRefresh
-- (void)setupRefresh
-{
-    self.userTableVIew.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
-    self.userTableVIew.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUser)];
-}
+
 #pragma 加载新数据
 - (void)loadNewUsers
 {

@@ -74,8 +74,8 @@
     // 标签栏
     UIView *titleView = [[UIView alloc] init];
     titleView.width = self.view.width;
-    titleView.height = 35;
-    titleView.y = 64;
+    titleView.height = LJTitilesViewH;
+    titleView.y = LJTitilesViewY;
     titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
     [self.view addSubview:titleView];
     self.titleView = titleView;
@@ -203,21 +203,20 @@
     
     // 当前的索引
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    
     // 取出子控制器
     UITableViewController *vc = self.childViewControllers[index];
     vc.view.x = scrollView.contentOffset.x;
-    
     // 设置tableview的y值为0
     vc.view.y = 0;
     // 设置控制器的view的height时整个屏幕的高度（默认时比屏幕高少个20）
     vc.view.height = scrollView.height;
-    
-    // 设置内边框
-    CGFloat top = CGRectGetMaxY(self.titleView.frame);
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-    // 设置滚动条内边距
-    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+//    // 设置内边框
+//    CGFloat top = CGRectGetMaxY(self.titleView.frame);
+//    CGFloat bottom = self.tabBarController.tabBar.height;
+//    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+//    // 设置滚动条内边距
+//    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
     [scrollView addSubview:vc.view];
 }
 
