@@ -20,6 +20,13 @@
 @property (nonatomic, strong) NSString * create_time;
 /** 内容*/
 @property (nonatomic, strong) NSString * text;
-
+/** 顶的数量*/
+@property (nonatomic, assign) NSInteger  ding;
+/** 踩的数量*/
+@property (nonatomic, assign) NSInteger  cai;
+/** 转发的数量*/
+@property (nonatomic, assign) NSInteger  repost;
+/** 评论的数量*/
+@property (nonatomic, assign) NSInteger  comment;
 
 @end

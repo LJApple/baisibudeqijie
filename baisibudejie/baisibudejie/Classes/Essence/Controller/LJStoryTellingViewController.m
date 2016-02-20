@@ -13,6 +13,7 @@
 #import <SVProgressHUD.h>
 #import <MJRefresh.h>
 #import "LJTopics.h"
+#import "LJTopicCell.h"
 
 @interface LJStoryTellingViewController ()
 
@@ -21,12 +22,12 @@
  */
 @property (nonatomic, strong) NSMutableArray *topics;
 
-// 当前页码
+/** 当前页码*/
 @property (nonatomic, assign) NSInteger page;
 
-//
+/** 加载下一页数据时需要的参数*/
 @property (nonatomic, copy) NSString *maxtime;
-
+/** 上一次请求的参数*/
 @property (nonatomic, strong) NSMutableDictionary *params;
 
 @end
@@ -48,6 +49,8 @@
     // 设置内边距
     [self setTabeleView];
 }
+
+static NSString *const LJTopicID = @"topic";
 - (void)setTabeleView
 {
      // 设置内边框
@@ -61,7 +64,10 @@
     // 去除背景
     self.tableView.backgroundColor = [UIColor clearColor];
     
-    self.tableView.rowHeight = 100;
+    self.tableView.rowHeight = 200;
+    
+    // 注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LJTopicCell class]) bundle:nil] forCellReuseIdentifier:LJTopicID];
 }
 
 /*
@@ -137,7 +143,6 @@
     }];
 
 }
-
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -146,20 +151,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *const ID = @"topics";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+ 
+    LJTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:LJTopicID];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    
-    LJTopics *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.create_time;
-    
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"mainCellBackground"]];
-    
-    //cell.textLabel.text = topic.text;
+    cell.topics = self.topics[indexPath.row];
     
     return cell;
 }

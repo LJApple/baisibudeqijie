@@ -29,6 +29,8 @@
 		579A67A01C78051E0078F80F /* LJStoryTellingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A679F1C78051E0078F80F /* LJStoryTellingViewController.m */; };
 		579A67A61C7835950078F80F /* LJTopics.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67A51C7835950078F80F /* LJTopics.m */; };
 		579A67AC1C785B110078F80F /* LJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67AB1C785B110078F80F /* LJConst.m */; };
+		579A67B01C786A550078F80F /* LJTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67AE1C786A550078F80F /* LJTopicCell.m */; };
+		579A67B11C786A550078F80F /* LJTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579A67AF1C786A550078F80F /* LJTopicCell.xib */; };
 		57DC77A11C742DB50019A4DA /* LJUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC779F1C742DB50019A4DA /* LJUserTableViewCell.m */; };
 		57DC77A21C742DB50019A4DA /* LJUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57DC77A01C742DB50019A4DA /* LJUserTableViewCell.xib */; };
 		57DC77A51C7432670019A4DA /* LJUserRecomendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC77A41C7432670019A4DA /* LJUserRecomendModel.m */; };
@@ -107,6 +109,9 @@
 		579A67A51C7835950078F80F /* LJTopics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJTopics.m; path = baisibudejie/Classes/Essence/Controller/LJTopics.m; sourceTree = SOURCE_ROOT; };
 		579A67AA1C785B110078F80F /* LJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJConst.h; sourceTree = "<group>"; };
 		579A67AB1C785B110078F80F /* LJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJConst.m; sourceTree = "<group>"; };
+		579A67AD1C786A550078F80F /* LJTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJTopicCell.h; path = baisibudejie/Classes/Other/LJTopicCell.h; sourceTree = SOURCE_ROOT; };
+		579A67AE1C786A550078F80F /* LJTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJTopicCell.m; path = baisibudejie/Classes/Other/LJTopicCell.m; sourceTree = SOURCE_ROOT; };
+		579A67AF1C786A550078F80F /* LJTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJTopicCell.xib; path = baisibudejie/Classes/Other/LJTopicCell.xib; sourceTree = SOURCE_ROOT; };
 		57D067EE1C72C50900219C23 /* baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067EF1C72C50900219C23 /* baisibudejieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067F01C72C50900219C23 /* baisibudejieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +300,9 @@
 				5766BFF41C74B64B003EF8C1 /* LJRecomentTagsCell.h */,
 				5766BFF51C74B64B003EF8C1 /* LJRecomentTagsCell.m */,
 				5766BFF61C74B64B003EF8C1 /* LJRecomentTagsCell.xib */,
+				579A67AD1C786A550078F80F /* LJTopicCell.h */,
+				579A67AE1C786A550078F80F /* LJTopicCell.m */,
+				579A67AF1C786A550078F80F /* LJTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -595,6 +603,7 @@
 				571006841C75B76F00EDAE20 /* LJLoginRigsterViewController.xib in Resources */,
 				5710068F1C76C62D00EDAE20 /* LJPushGuide.xib in Resources */,
 				5766BFF81C74B64B003EF8C1 /* LJRecomentTagsCell.xib in Resources */,
+				579A67B11C786A550078F80F /* LJTopicCell.xib in Resources */,
 				571529981C72B992005F7107 /* LJCategoryTableViewCell.xib in Resources */,
 				57DC77A21C742DB50019A4DA /* LJUserTableViewCell.xib in Resources */,
 			);
@@ -698,6 +707,7 @@
 				5710068D1C76C5F500EDAE20 /* LJPushGuide.m in Sources */,
 				579A67941C7804590078F80F /* LJAllViewController.m in Sources */,
 				5766BFF01C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m in Sources */,
+				579A67B01C786A550078F80F /* LJTopicCell.m in Sources */,
 				57EB3E471C70AAC400325104 /* LJEssenceViewController.m in Sources */,
 				57EB3E4E1C70AAC400325104 /* LJViewController.m in Sources */,
 			);

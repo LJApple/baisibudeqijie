@@ -50,20 +50,26 @@
  */
 - (void)setupChildControler
 {
+    LJStoryTellingViewController *story = [[LJStoryTellingViewController alloc] init];
+    story.title = @"段子";
+    [self addChildViewController:story];
     LJAllViewController *all = [[LJAllViewController alloc] init];
+    all.title = @"全部内容";
     [self addChildViewController:all];
     
     LJVideoViewController *video = [[LJVideoViewController alloc] init];
+    video.title = @"视频";
     [self addChildViewController:video];
     
     LJVoiceViewController *voice = [[LJVoiceViewController alloc] init];
+    voice.title = @"声音";
     [self addChildViewController:voice];
     
     LJPictureViewController *picture = [[LJPictureViewController alloc] init];
+    picture.title = @"图片";
     [self addChildViewController:picture];
     
-    LJStoryTellingViewController *story = [[LJStoryTellingViewController alloc] init];
-    [self addChildViewController:story];
+   
 }
 
 /**
@@ -88,10 +94,9 @@
     self.indicatorView = indicatorView;
     
     // 内部的字标签
-    NSArray *titles = @[@"全部内容",@"视频",@"声音",@"图片",@"段子"];
-    CGFloat width =  self.view.width / titles.count;
+    CGFloat width =  self.view.width / self.childViewControllers.count;
     CGFloat height  =titleView.height;
-    for (NSUInteger i = 0; i < titles.count; i ++) {
+    for (NSUInteger i = 0; i < self.childViewControllers.count; i ++) {
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         
@@ -100,7 +105,7 @@
         button.width = width;
         button.x = i * width;
         
-        [button setTitle:titles[i] forState:UIControlStateNormal];
+        [button setTitle:self.childViewControllers[i].title forState:UIControlStateNormal];
         // 强制布局(强制更新子控件的frame)
        // [button layoutIfNeeded];
         
