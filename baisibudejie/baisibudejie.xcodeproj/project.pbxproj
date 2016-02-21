@@ -29,6 +29,8 @@
 		579A67B41C78A23E0078F80F /* NSDate+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67B31C78A23E0078F80F /* NSDate+LJExtension.m */; };
 		579A67B71C78CCD30078F80F /* UIButton+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67B61C78CCD30078F80F /* UIButton+LJExtension.m */; };
 		579A67BA1C794C240078F80F /* LJTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67B91C794C240078F80F /* LJTopicView.m */; };
+		579A67BD1C7996D60078F80F /* LJTopicPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67BC1C7996D60078F80F /* LJTopicPicture.m */; };
+		579A67BF1C7996E60078F80F /* LJTopicPicture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579A67BE1C7996E60078F80F /* LJTopicPicture.xib */; };
 		57DC77A11C742DB50019A4DA /* LJUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC779F1C742DB50019A4DA /* LJUserTableViewCell.m */; };
 		57DC77A21C742DB50019A4DA /* LJUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57DC77A01C742DB50019A4DA /* LJUserTableViewCell.xib */; };
 		57DC77A51C7432670019A4DA /* LJUserRecomendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC77A41C7432670019A4DA /* LJUserRecomendModel.m */; };
@@ -106,6 +108,9 @@
 		579A67B61C78CCD30078F80F /* UIButton+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LJExtension.m"; sourceTree = "<group>"; };
 		579A67B81C794C240078F80F /* LJTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTopicView.h; sourceTree = "<group>"; };
 		579A67B91C794C240078F80F /* LJTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTopicView.m; sourceTree = "<group>"; };
+		579A67BB1C7996D60078F80F /* LJTopicPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJTopicPicture.h; path = baisibudejie/Classes/Essence/Controller/LJTopicPicture.h; sourceTree = SOURCE_ROOT; };
+		579A67BC1C7996D60078F80F /* LJTopicPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJTopicPicture.m; path = baisibudejie/Classes/Essence/Controller/LJTopicPicture.m; sourceTree = SOURCE_ROOT; };
+		579A67BE1C7996E60078F80F /* LJTopicPicture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJTopicPicture.xib; path = baisibudejie/Classes/Essence/Controller/LJTopicPicture.xib; sourceTree = SOURCE_ROOT; };
 		57D067EE1C72C50900219C23 /* baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067EF1C72C50900219C23 /* baisibudejieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067F01C72C50900219C23 /* baisibudejieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +294,9 @@
 				579A67AD1C786A550078F80F /* LJTopicCell.h */,
 				579A67AE1C786A550078F80F /* LJTopicCell.m */,
 				579A67AF1C786A550078F80F /* LJTopicCell.xib */,
+				579A67BB1C7996D60078F80F /* LJTopicPicture.h */,
+				579A67BC1C7996D60078F80F /* LJTopicPicture.m */,
+				579A67BE1C7996E60078F80F /* LJTopicPicture.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,6 +599,7 @@
 				57EB3E5A1C70E51100325104 /* LJFriendTrendsViewController.xib in Resources */,
 				57DDCE621C6F711B00AD3331 /* Assets.xcassets in Resources */,
 				571006841C75B76F00EDAE20 /* LJLoginRigsterViewController.xib in Resources */,
+				579A67BF1C7996E60078F80F /* LJTopicPicture.xib in Resources */,
 				5710068F1C76C62D00EDAE20 /* LJPushGuide.xib in Resources */,
 				5766BFF81C74B64B003EF8C1 /* LJRecomentTagsCell.xib in Resources */,
 				579A67B11C786A550078F80F /* LJTopicCell.xib in Resources */,
@@ -689,6 +698,7 @@
 				579A67B71C78CCD30078F80F /* UIButton+LJExtension.m in Sources */,
 				5771676A1C731A6B00BB62EB /* Foundation+Log.m in Sources */,
 				579A67B41C78A23E0078F80F /* NSDate+LJExtension.m in Sources */,
+				579A67BD1C7996D60078F80F /* LJTopicPicture.m in Sources */,
 				579A67BA1C794C240078F80F /* LJTopicView.m in Sources */,
 				571529921C72B434005F7107 /* LJRecommentCategory.m in Sources */,
 				579A67A61C7835950078F80F /* LJTopics.m in Sources */,

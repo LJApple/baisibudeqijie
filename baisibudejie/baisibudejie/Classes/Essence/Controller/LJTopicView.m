@@ -17,9 +17,7 @@
 
 @interface LJTopicView  ()
 
-/**
- *  段子数据
- */
+/** 段子数据*/
 @property (nonatomic, strong) NSMutableArray *topics;
 
 /** 当前页码*/

@@ -8,15 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum  {
-    LJTopicTypeAll = 1,
-    LJTopicTypeVideo = 41,
-    LJTopicTypeVoice = 31,
-    LJTopicTypePicture = 10,
-    LJTopicTypeStory = 29
-
-} LJTopicType;
-
 @interface LJTopicView : UITableViewController
 
 @property (nonatomic, assign) LJTopicType type;

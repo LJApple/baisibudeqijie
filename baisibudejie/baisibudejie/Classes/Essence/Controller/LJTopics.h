@@ -37,13 +37,16 @@
 /** 中图*/
 @property (nonatomic, strong) NSString * middleImage;
 /** 图片的高度*/
-@property (nonatomic, assign) NSInteger  height;
+@property (nonatomic, assign) CGFloat  height;
 /** 图片的宽度*/
-@property (nonatomic, assign) NSInteger  width;
+@property (nonatomic, assign) CGFloat  width;
+/** 帖子类型属性*/
+@property (nonatomic, assign) LJTopicType type;
 
 
-
-
+/** 其它类型属性*/
 /** cell的高度*/
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
+/** 图片的frame*/
+@property (nonatomic, assign, readonly) CGRect pictureF;
 @end

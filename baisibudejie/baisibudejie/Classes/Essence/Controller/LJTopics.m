@@ -12,6 +12,7 @@
 @implementation LJTopics
 {
     CGFloat _cellHeight;
+    CGRect _pictureF;
 }
 
 - (NSString *)create_time
@@ -82,15 +83,26 @@
 {
     if (!_cellHeight) {
        
-       // LJLog(@"\n %@\n %@\n %@\n", self.smallImage, self.largeImage, self.middleImage);
+       
+        // 文字最大尺寸
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * LJTopicMarigin, MAXFLOAT) ;
         // 计算文字的高度
-        CGFloat textH = [self.text boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * LJTopicMarigin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
         
         // 计算图片的高度
+        _cellHeight = LJTopicCellTextY + textH + LJTopicCellBottomH + 2 * LJTopicMarigin;
         
-        _cellHeight = LJTopicCellTextY + textH + LJTopicCellBottomH + 2 * LJTopicMarigin + self.height;
-
-    }
+        // 根据类型计算图片的高度
+        if (self.type == LJTopicTypePicture) {
+            CGFloat pictureW = maxSize.width;
+            CGFloat pictureH = pictureW * self.height / self.width;
+            _cellHeight += pictureH + LJTopicMarigin;
+            
+            CGFloat pictureX = LJTopicMarigin;
+            CGFloat pictureY = LJTopicCellTextY + textH + LJTopicMarigin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+        }
+}
     return _cellHeight;
 }
 @end

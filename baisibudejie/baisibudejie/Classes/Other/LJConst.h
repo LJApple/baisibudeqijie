@@ -1,6 +1,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum  {
+    LJTopicTypeAll = 1,
+    LJTopicTypeVideo = 41,
+    LJTopicTypeVoice = 31,
+    LJTopicTypePicture = 10,
+    LJTopicTypeStory = 29
+    
+} LJTopicType;
+
 /** 顶部导航条的高度*/
 UIKIT_EXTERN CGFloat const LJTitilesViewH;
 /** 顶部导航条Y值*/
