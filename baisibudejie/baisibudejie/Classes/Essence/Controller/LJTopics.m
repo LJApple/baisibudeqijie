@@ -7,29 +7,33 @@
 //
 
 #import "LJTopics.h"
+// #import <MJExtension.h>
 
 @implementation LJTopics
-
-/**
- 今年
- 今天
- 1分钟内
- 刚刚
- 1小时内
- xx分钟前
- 其他
- xx小时前
- 昨天
- 昨天 18:56:34
- 其他
- 06-23 19:56:23
- 
- 非今年
- 2014-05-08 18:45:30
- */
+{
+    CGFloat _cellHeight;
+}
 
 - (NSString *)create_time
 {
+    /**
+     今年
+     今天
+     1分钟内
+     刚刚
+     1小时内
+     xx分钟前
+     其他
+     xx小时前
+     昨天
+     昨天 18:56:34
+     其他
+     06-23 19:56:23
+     
+     非今年
+     2014-05-08 18:45:30
+     */
+
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     // 帖子创建时间
@@ -56,6 +60,37 @@
     } else {
         return  _create_time;
     }
+}
 
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"smallImage":@"image0",
+             @"largeImage":@"image1",
+             @"middleImage":@"image2"
+             };
+}
+
+//+ (NSString *)mj_replacedKeyFromPropertyName121:(NSString *)propertyName
+//{
+//    if ([propertyName isEqualToString:@"smallImage"]) {
+//        return @"small_image";
+//    }
+//    return propertyName;
+//}
+- (CGFloat)cellHeight
+{
+    if (!_cellHeight) {
+       
+       // LJLog(@"\n %@\n %@\n %@\n", self.smallImage, self.largeImage, self.middleImage);
+        // 计算文字的高度
+        CGFloat textH = [self.text boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * LJTopicMarigin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+        
+        // 计算图片的高度
+        
+        _cellHeight = LJTopicCellTextY + textH + LJTopicCellBottomH + 2 * LJTopicMarigin + self.height;
+
+    }
+    return _cellHeight;
 }
 @end

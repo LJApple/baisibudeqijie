@@ -110,7 +110,7 @@ static NSString * const LJUsersID = @"users";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(re.id);
+    params[@"category_id"] = @(re.ID);
     params[@"next_page"] = @(re.currentPage);
     self.params = params;
     
@@ -155,7 +155,7 @@ static NSString * const LJUsersID = @"users";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
-    params[@"category_id"] = @([LJSelectCategory id]);
+    params[@"category_id"] = @([LJSelectCategory ID]);
     params[@"page"] = @(++re.currentPage);
     self.params = params;
     

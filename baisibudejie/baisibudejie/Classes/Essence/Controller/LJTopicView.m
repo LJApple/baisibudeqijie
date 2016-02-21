@@ -64,8 +64,6 @@ static NSString *const LJTopicID = @"topic";
     // 去除背景
     self.tableView.backgroundColor = [UIColor clearColor];
     
-    self.tableView.rowHeight = 200;
-    
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LJTopicCell class]) bundle:nil] forCellReuseIdentifier:LJTopicID];
 }
@@ -157,5 +155,14 @@ static NSString *const LJTopicID = @"topic";
     cell.topics = self.topics[indexPath.row];
     
     return cell;
+}
+
+#pragma mark - Table view delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 取出模型数据
+    LJTopics *topic = self.topics[indexPath.row];
+   
+    return topic.cellHeight;
 }
 @end

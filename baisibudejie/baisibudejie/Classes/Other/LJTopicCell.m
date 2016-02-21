@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UIImageView *sina_vImageView;
+@property (weak, nonatomic) IBOutlet UILabel *textContentLabel;
 
 @end
 
@@ -38,13 +39,11 @@
  */
 - (void)setFrame:(CGRect)frame
 {
-    static NSInteger margin = 10;
+    frame.origin.x = LJTopicMarigin;
+    frame.origin.y += LJTopicMarigin;
     
-    frame.origin.x = margin;
-    frame.origin.y += margin;
-    
-    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
+    frame.size.width -= 2 * LJTopicMarigin;
+    frame.size.height -= LJTopicMarigin;
     
     [super setFrame:frame];
 }
@@ -66,5 +65,8 @@
     [self.caiButton setButtonTitle:topics.cai title:@"踩"];
     [self.shareButton setButtonTitle:topics.repost title:@"分享"];
     [self.commentButton setButtonTitle:topics.comment title:@"评论"];
+    
+    self.textContentLabel.text = topics.text;
+    
 }
 @end
