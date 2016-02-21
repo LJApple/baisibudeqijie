@@ -29,4 +29,8 @@
 /** 评论的数量*/
 @property (nonatomic, assign) NSInteger  comment;
 
+/** 是否是新浪注册用户*/
+@property (nonatomic, assign, getter=isSina_v) BOOL sina_v ;
+
+
 @end

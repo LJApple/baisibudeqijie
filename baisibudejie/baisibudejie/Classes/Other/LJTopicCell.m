@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UIImageView *sina_vImageView;
 
 @end
 
@@ -32,7 +33,9 @@
     [super setSelected:selected animated:animated];
 
 }
-
+/**
+ *  对scrolView进行调整
+ */
 - (void)setFrame:(CGRect)frame
 {
     static NSInteger margin = 10;
@@ -45,8 +48,13 @@
     
     [super setFrame:frame];
 }
+
+/** 设置数据*/
 - (void)setTopics:(LJTopics *)topics
 {
+    // 判断是否时x新浪注册
+    self.sina_vImageView.hidden = !topics.isSina_v;
+    
     _topics = topics;
     
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topics.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
@@ -54,20 +62,9 @@
     self.timeLabel.text = topics.create_time;
     
     // 设置底部按钮
-    [self setButtonTitle:self.dingButton number:topics.ding title:@"顶"];
-    [self setButtonTitle:self.caiButton number:topics.cai title:@"踩"];
-    [self setButtonTitle:self.shareButton number:topics.repost title:@"分享"];
-    [self setButtonTitle:self.commentButton number:topics.comment title:@"评论"];
-}
-
-- (void)setButtonTitle : (UIButton *)button number : (NSInteger)number title: (NSString *)title
-{
-
-    if ( number> 10000) {
-        title = [NSString stringWithFormat:@"%.1f万", number / 10000.0];
-    } else  if (number > 0){
-        title = [NSString stringWithFormat:@"%zd", number];
-    } 
-    [button setTitle:title forState:UIControlStateNormal];
+    [self.dingButton setButtonTitle:topics.ding title:@"顶"];
+    [self.caiButton setButtonTitle:topics.cai title:@"踩"];
+    [self.shareButton setButtonTitle:topics.repost title:@"分享"];
+    [self.commentButton setButtonTitle:topics.comment title:@"评论"];
 }
 @end

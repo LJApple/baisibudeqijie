@@ -22,15 +22,13 @@
 		5766BFF71C74B64B003EF8C1 /* LJRecomentTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766BFF51C74B64B003EF8C1 /* LJRecomentTagsCell.m */; };
 		5766BFF81C74B64B003EF8C1 /* LJRecomentTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5766BFF61C74B64B003EF8C1 /* LJRecomentTagsCell.xib */; };
 		5771676A1C731A6B00BB62EB /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 577167691C731A6B00BB62EB /* Foundation+Log.m */; };
-		579A67941C7804590078F80F /* LJAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67931C7804590078F80F /* LJAllViewController.m */; };
-		579A67971C7804760078F80F /* LJVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67961C7804760078F80F /* LJVideoViewController.m */; };
-		579A679A1C7804A40078F80F /* LJVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67991C7804A40078F80F /* LJVoiceViewController.m */; };
-		579A679D1C7804BD0078F80F /* LJPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A679C1C7804BD0078F80F /* LJPictureViewController.m */; };
-		579A67A01C78051E0078F80F /* LJStoryTellingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A679F1C78051E0078F80F /* LJStoryTellingViewController.m */; };
 		579A67A61C7835950078F80F /* LJTopics.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67A51C7835950078F80F /* LJTopics.m */; };
 		579A67AC1C785B110078F80F /* LJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67AB1C785B110078F80F /* LJConst.m */; };
 		579A67B01C786A550078F80F /* LJTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67AE1C786A550078F80F /* LJTopicCell.m */; };
 		579A67B11C786A550078F80F /* LJTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579A67AF1C786A550078F80F /* LJTopicCell.xib */; };
+		579A67B41C78A23E0078F80F /* NSDate+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67B31C78A23E0078F80F /* NSDate+LJExtension.m */; };
+		579A67B71C78CCD30078F80F /* UIButton+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67B61C78CCD30078F80F /* UIButton+LJExtension.m */; };
+		579A67BA1C794C240078F80F /* LJTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67B91C794C240078F80F /* LJTopicView.m */; };
 		57DC77A11C742DB50019A4DA /* LJUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC779F1C742DB50019A4DA /* LJUserTableViewCell.m */; };
 		57DC77A21C742DB50019A4DA /* LJUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57DC77A01C742DB50019A4DA /* LJUserTableViewCell.xib */; };
 		57DC77A51C7432670019A4DA /* LJUserRecomendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC77A41C7432670019A4DA /* LJUserRecomendModel.m */; };
@@ -95,16 +93,6 @@
 		5766BFF51C74B64B003EF8C1 /* LJRecomentTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJRecomentTagsCell.m; path = baisibudejie/Classes/Essence/Controller/LJRecomentTagsCell.m; sourceTree = SOURCE_ROOT; };
 		5766BFF61C74B64B003EF8C1 /* LJRecomentTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJRecomentTagsCell.xib; path = baisibudejie/Classes/Essence/Controller/LJRecomentTagsCell.xib; sourceTree = SOURCE_ROOT; };
 		577167691C731A6B00BB62EB /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
-		579A67921C7804590078F80F /* LJAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJAllViewController.h; sourceTree = "<group>"; };
-		579A67931C7804590078F80F /* LJAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJAllViewController.m; sourceTree = "<group>"; };
-		579A67951C7804760078F80F /* LJVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJVideoViewController.h; sourceTree = "<group>"; };
-		579A67961C7804760078F80F /* LJVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJVideoViewController.m; sourceTree = "<group>"; };
-		579A67981C7804A40078F80F /* LJVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJVoiceViewController.h; sourceTree = "<group>"; };
-		579A67991C7804A40078F80F /* LJVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJVoiceViewController.m; sourceTree = "<group>"; };
-		579A679B1C7804BD0078F80F /* LJPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJPictureViewController.h; sourceTree = "<group>"; };
-		579A679C1C7804BD0078F80F /* LJPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJPictureViewController.m; sourceTree = "<group>"; };
-		579A679E1C78051E0078F80F /* LJStoryTellingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJStoryTellingViewController.h; sourceTree = "<group>"; };
-		579A679F1C78051E0078F80F /* LJStoryTellingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJStoryTellingViewController.m; sourceTree = "<group>"; };
 		579A67A41C7835950078F80F /* LJTopics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJTopics.h; path = baisibudejie/Classes/Essence/Controller/LJTopics.h; sourceTree = SOURCE_ROOT; };
 		579A67A51C7835950078F80F /* LJTopics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJTopics.m; path = baisibudejie/Classes/Essence/Controller/LJTopics.m; sourceTree = SOURCE_ROOT; };
 		579A67AA1C785B110078F80F /* LJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJConst.h; sourceTree = "<group>"; };
@@ -112,6 +100,12 @@
 		579A67AD1C786A550078F80F /* LJTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJTopicCell.h; path = baisibudejie/Classes/Other/LJTopicCell.h; sourceTree = SOURCE_ROOT; };
 		579A67AE1C786A550078F80F /* LJTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJTopicCell.m; path = baisibudejie/Classes/Other/LJTopicCell.m; sourceTree = SOURCE_ROOT; };
 		579A67AF1C786A550078F80F /* LJTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJTopicCell.xib; path = baisibudejie/Classes/Other/LJTopicCell.xib; sourceTree = SOURCE_ROOT; };
+		579A67B21C78A23E0078F80F /* NSDate+LJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LJExtension.h"; sourceTree = "<group>"; };
+		579A67B31C78A23E0078F80F /* NSDate+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LJExtension.m"; sourceTree = "<group>"; };
+		579A67B51C78CCD30078F80F /* UIButton+LJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LJExtension.h"; sourceTree = "<group>"; };
+		579A67B61C78CCD30078F80F /* UIButton+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LJExtension.m"; sourceTree = "<group>"; };
+		579A67B81C794C240078F80F /* LJTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTopicView.h; sourceTree = "<group>"; };
+		579A67B91C794C240078F80F /* LJTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTopicView.m; sourceTree = "<group>"; };
 		57D067EE1C72C50900219C23 /* baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067EF1C72C50900219C23 /* baisibudejieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067F01C72C50900219C23 /* baisibudejieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,16 +263,8 @@
 				57EB3E1E1C70AAC400325104 /* LJEssenceViewController.m */,
 				5766BFEE1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.h */,
 				5766BFEF1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m */,
-				579A67921C7804590078F80F /* LJAllViewController.h */,
-				579A67931C7804590078F80F /* LJAllViewController.m */,
-				579A67951C7804760078F80F /* LJVideoViewController.h */,
-				579A67961C7804760078F80F /* LJVideoViewController.m */,
-				579A67981C7804A40078F80F /* LJVoiceViewController.h */,
-				579A67991C7804A40078F80F /* LJVoiceViewController.m */,
-				579A679B1C7804BD0078F80F /* LJPictureViewController.h */,
-				579A679C1C7804BD0078F80F /* LJPictureViewController.m */,
-				579A679E1C78051E0078F80F /* LJStoryTellingViewController.h */,
-				579A679F1C78051E0078F80F /* LJStoryTellingViewController.m */,
+				579A67B81C794C240078F80F /* LJTopicView.h */,
+				579A67B91C794C240078F80F /* LJTopicView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -451,6 +437,10 @@
 				57EB3E3C1C70AAC400325104 /* UIBarButtonItem+LJExtension.m */,
 				57EB3E3D1C70AAC400325104 /* UIView+LJExtension.h */,
 				57EB3E3E1C70AAC400325104 /* UIView+LJExtension.m */,
+				579A67B21C78A23E0078F80F /* NSDate+LJExtension.h */,
+				579A67B31C78A23E0078F80F /* NSDate+LJExtension.m */,
+				579A67B51C78CCD30078F80F /* UIButton+LJExtension.h */,
+				579A67B61C78CCD30078F80F /* UIButton+LJExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -682,8 +672,6 @@
 				57EB3E481C70AAC400325104 /* LJFriendTrendsViewController.m in Sources */,
 				5710068A1C76AC8600EDAE20 /* LJTextField.m in Sources */,
 				57EB3E501C70AAC400325104 /* LJTabBar.m in Sources */,
-				579A67971C7804760078F80F /* LJVideoViewController.m in Sources */,
-				579A679D1C7804BD0078F80F /* LJPictureViewController.m in Sources */,
 				57EB3E4A1C70AAC400325104 /* LJNewViewController.m in Sources */,
 				57EB3E4B1C70AAC400325104 /* AppDelegate.m in Sources */,
 				571529971C72B992005F7107 /* LJCategoryTableViewCell.m in Sources */,
@@ -692,20 +680,20 @@
 				57EB3E491C70AAC400325104 /* LJMeViewController.m in Sources */,
 				579A67AC1C785B110078F80F /* LJConst.m in Sources */,
 				57DC77A11C742DB50019A4DA /* LJUserTableViewCell.m in Sources */,
-				579A679A1C7804A40078F80F /* LJVoiceViewController.m in Sources */,
 				57EB3E531C70BEF900325104 /* LJNavigationController.m in Sources */,
 				571006831C75B76F00EDAE20 /* LJLoginRigsterViewController.m in Sources */,
 				57EB3E4C1C70AAC400325104 /* UIBarButtonItem+LJExtension.m in Sources */,
 				57EB3E4D1C70AAC400325104 /* UIView+LJExtension.m in Sources */,
 				5766BFF31C74B252003EF8C1 /* LJRecomendTags.m in Sources */,
 				5766BFF71C74B64B003EF8C1 /* LJRecomentTagsCell.m in Sources */,
+				579A67B71C78CCD30078F80F /* UIButton+LJExtension.m in Sources */,
 				5771676A1C731A6B00BB62EB /* Foundation+Log.m in Sources */,
-				579A67A01C78051E0078F80F /* LJStoryTellingViewController.m in Sources */,
+				579A67B41C78A23E0078F80F /* NSDate+LJExtension.m in Sources */,
+				579A67BA1C794C240078F80F /* LJTopicView.m in Sources */,
 				571529921C72B434005F7107 /* LJRecommentCategory.m in Sources */,
 				579A67A61C7835950078F80F /* LJTopics.m in Sources */,
 				57DC77A51C7432670019A4DA /* LJUserRecomendModel.m in Sources */,
 				5710068D1C76C5F500EDAE20 /* LJPushGuide.m in Sources */,
-				579A67941C7804590078F80F /* LJAllViewController.m in Sources */,
 				5766BFF01C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m in Sources */,
 				579A67B01C786A550078F80F /* LJTopicCell.m in Sources */,
 				57EB3E471C70AAC400325104 /* LJEssenceViewController.m in Sources */,

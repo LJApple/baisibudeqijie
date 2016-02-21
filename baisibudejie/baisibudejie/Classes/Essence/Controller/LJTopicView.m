@@ -6,7 +6,7 @@
 //  Copyright © 2016年 吕俊. All rights reserved.
 //
 
-#import "LJStoryTellingViewController.h"
+#import "LJTopicView.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <UIImageView+WebCache.h>
@@ -15,7 +15,7 @@
 #import "LJTopics.h"
 #import "LJTopicCell.h"
 
-@interface LJStoryTellingViewController ()
+@interface LJTopicView  ()
 
 /**
  *  段子数据
@@ -32,7 +32,7 @@
 
 @end
 
-@implementation LJStoryTellingViewController
+@implementation LJTopicView
 
 - (NSMutableArray *)topics
 {
@@ -53,7 +53,7 @@
 static NSString *const LJTopicID = @"topic";
 - (void)setTabeleView
 {
-     // 设置内边框
+    // 设置内边框
     CGFloat top = LJTitilesViewH + LJTitilesViewY;
     CGFloat bottom = self.tabBarController.tabBar.height;
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
@@ -97,7 +97,7 @@ static NSString *const LJTopicID = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     self.params = params;
     [[AFHTTPSessionManager manager] POST:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
@@ -124,7 +124,7 @@ static NSString *const LJTopicID = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     params[@"page"] = @(self.page);
     params[@"maxtime"] = self.maxtime;
     self.params = params;
@@ -139,9 +139,9 @@ static NSString *const LJTopicID = @"topic";
         [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_footer endRefreshing];
-         self.page--;
+        self.page--;
     }];
-
+    
 }
 #pragma mark - Table view data source
 
@@ -151,7 +151,7 @@ static NSString *const LJTopicID = @"topic";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- 
+    
     LJTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:LJTopicID];
     
     cell.topics = self.topics[indexPath.row];

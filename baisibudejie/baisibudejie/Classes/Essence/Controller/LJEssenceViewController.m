@@ -8,11 +8,7 @@
 
 #import "LJEssenceViewController.h"
 #import "LJRecomendTagsTableViewController.h"
-#import "LJAllViewController.h"
-#import "LJVideoViewController.h"
-#import "LJVoiceViewController.h"
-#import "LJPictureViewController.h"
-#import "LJStoryTellingViewController.h"
+#import "LJTopicView.h"
 @interface LJEssenceViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, weak)UIView *indicatorView;
@@ -50,26 +46,31 @@
  */
 - (void)setupChildControler
 {
-    LJStoryTellingViewController *story = [[LJStoryTellingViewController alloc] init];
-    story.title = @"段子";
-    [self addChildViewController:story];
-    LJAllViewController *all = [[LJAllViewController alloc] init];
+    
+    LJTopicView *all = [[LJTopicView alloc] init];
     all.title = @"全部内容";
+    all.type = LJTopicTypeAll;
     [self addChildViewController:all];
     
-    LJVideoViewController *video = [[LJVideoViewController alloc] init];
+    LJTopicView *video = [[LJTopicView alloc] init];
     video.title = @"视频";
+    video.type = LJTopicTypeVideo;
     [self addChildViewController:video];
     
-    LJVoiceViewController *voice = [[LJVoiceViewController alloc] init];
+    LJTopicView *voice = [[LJTopicView alloc] init];
     voice.title = @"声音";
+    voice.type = LJTopicTypeVoice;
     [self addChildViewController:voice];
     
-    LJPictureViewController *picture = [[LJPictureViewController alloc] init];
+    LJTopicView *picture = [[LJTopicView alloc] init];
     picture.title = @"图片";
+    picture.type = LJTopicTypePicture;
     [self addChildViewController:picture];
     
-   
+    LJTopicView *story = [[LJTopicView alloc] init];
+    story.title = @"段子";
+    story.type = LJTopicTypeStory;
+    [self addChildViewController:story];
 }
 
 /**
