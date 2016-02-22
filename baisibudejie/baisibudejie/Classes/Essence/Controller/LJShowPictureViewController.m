@@ -71,7 +71,7 @@
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
-{hang
+{
     if (error) {
         [SVProgressHUD showErrorWithStatus:@"保存失败"];
     } else {
