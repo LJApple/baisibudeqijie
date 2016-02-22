@@ -23,11 +23,11 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It1-Jy-R5K">
-                        <rect key="frame" x="75" y="14" width="42" height="20"/>
+                        <rect key="frame" x="75" y="14" width="37.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Hmc-c8-b8w"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -46,7 +46,7 @@
                             <constraint firstAttribute="height" constant="30" id="erC-HY-W3l"/>
                             <constraint firstAttribute="width" constant="45" id="r7H-2Z-KFj"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <state key="normal" title="＋关注" backgroundImage="FollowBtnBg">
                             <color key="titleColor" red="1" green="0.46257630078053524" blue="0.50514127451663704" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
@@ -55,7 +55,7 @@
                         </state>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgT-oL-tq0">
-                        <rect key="frame" x="0.0" y="69.5" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="69" width="320" height="1"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="SED-aQ-zDd"/>

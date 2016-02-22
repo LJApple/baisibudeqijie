@@ -26,6 +26,9 @@
                         <constraint firstAttribute="width" constant="16" id="n3n-Yu-juY"/>
                     </constraints>
                     <state key="normal" backgroundImage="login_close_icon"/>
+                    <connections>
+                        <action selector="close" destination="-1" eventType="touchUpInside" id="7ab-Q3-SpK"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0k8-gf-CRs">
                     <rect key="frame" x="528" y="40" width="52" height="28"/>

@@ -20,6 +20,8 @@
     
     self.backgroundColor = LJRGBColor(244, 244, 244);
     self.selectedIndicator.backgroundColor =  LJRGBColor(195,72, 76);
+    self.textLabel.font = [UIFont systemFontOfSize:14];
+    self.textLabel.numberOfLines = 0;
     
 }
 

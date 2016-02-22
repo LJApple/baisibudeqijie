@@ -15,7 +15,7 @@
 @interface LJShowPictureViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) UIImageView *imageView;
-@property (nonatomic, weak) LJProgressView *pictureClickProgress;
+@property (weak, nonatomic) IBOutlet LJProgressView *pictureClickProgress;
 
 @end
 
@@ -48,10 +48,11 @@
     }
     
     // 加载数据
-    [self.pictureClickProgress setProgress:self.topic.pictureProgress animated:NO];
+    [self.pictureClickProgress setProgress:self.topic.pictureProgress animated:YES];
+    
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.largeImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        self.topic.pictureProgress = 1.0 * receivedSize / expectedSize ;
-        [self.pictureClickProgress setProgress:self.topic.pictureProgress animated:YES];
+        self.pictureClickProgress.hidden = NO;
+        [self.pictureClickProgress setProgress:1.0 * receivedSize/ expectedSize animated:NO];
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.pictureClickProgress.hidden = YES;
     }];
