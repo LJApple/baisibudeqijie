@@ -12,3 +12,9 @@ CGFloat const LJTopicMarigin =  10;
 CGFloat const LJTopicCellBottomH = 44;
 /** 用户文字的Y*/
 CGFloat const LJTopicCellTextY = 70;
+
+/** 精华帖子中的最大高度*/
+CGFloat const LJTopicCellPictureH = 1000;
+
+/** 精华－帖子超过后这是的高度*/
+CGFloat const LJTopicCellImageH = 250;

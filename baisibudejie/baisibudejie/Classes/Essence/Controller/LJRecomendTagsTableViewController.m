@@ -47,7 +47,7 @@ static NSString * const LJRecomendTagID = @"tags";
  */
 - (void)loadRecomendTags {
     // 设置
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeNone];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"tag_recommend";

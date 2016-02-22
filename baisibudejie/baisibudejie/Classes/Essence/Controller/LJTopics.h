@@ -49,4 +49,6 @@
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
 /** 图片的frame*/
 @property (nonatomic, assign, readonly) CGRect pictureF;
+/** 是否超过规定的长度*/
+@property (nonatomic, assign, getter=isAutoNumberImage) BOOL  autoNumberImage;
 @end

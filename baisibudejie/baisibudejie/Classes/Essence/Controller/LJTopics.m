@@ -96,6 +96,10 @@
         if (self.type == LJTopicTypePicture) {
             CGFloat pictureW = maxSize.width;
             CGFloat pictureH = pictureW * self.height / self.width;
+            if (pictureH > LJTopicCellPictureH) {
+                pictureH = LJTopicCellImageH;
+                self.autoNumberImage = YES;
+            }
             _cellHeight += pictureH + LJTopicMarigin;
             
             CGFloat pictureX = LJTopicMarigin;

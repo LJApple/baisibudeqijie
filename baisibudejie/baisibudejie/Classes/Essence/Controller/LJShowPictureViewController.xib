@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LJShowPictureViewController">
+            <connections>
+                <outlet property="scrollView" destination="DIO-nn-ba5" id="dNL-jZ-bft"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIO-nn-ba5">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </scrollView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="cellFollowClickIcon" translatesAutoresizingMaskIntoConstraints="NO" id="UbP-6h-jWY">
+                    <rect key="frame" x="401" y="495" width="19" height="20"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmo-My-PMC">
+                    <rect key="frame" x="15" y="25" width="35" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7g0-6P-FJb"/>
+                        <constraint firstAttribute="width" constant="35" id="Srb-CK-9xx"/>
+                    </constraints>
+                    <state key="normal" image="show_image_back_icon"/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="Y81-MS-THu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpG-xz-rmF">
+                    <rect key="frame" x="525" y="560" width="60" height="25"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Dk6-5n-c1T"/>
+                        <constraint firstAttribute="width" constant="60" id="mDK-1W-sPD"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="save" destination="-1" eventType="touchUpInside" id="eYw-nH-G1I"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1t-e6-Sv3">
+                    <rect key="frame" x="445" y="560" width="60" height="25"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="ADG-HO-xyI"/>
+                        <constraint firstAttribute="height" constant="25" id="YWY-c2-Kgy"/>
+                        <constraint firstAttribute="width" constant="60" id="ZSh-ia-qV2"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="fOv-jV-aEG"/>
+                    </constraints>
+                    <state key="normal" title="转发">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DIO-nn-ba5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="46F-ch-pSh"/>
+                <constraint firstItem="DIO-nn-ba5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="COK-ba-BVA"/>
+                <constraint firstItem="qpG-xz-rmF" firstAttribute="leading" secondItem="S1t-e6-Sv3" secondAttribute="trailing" constant="20" id="NzC-y1-c7S"/>
+                <constraint firstAttribute="trailing" secondItem="qpG-xz-rmF" secondAttribute="trailing" constant="15" id="T8w-Cg-dl5"/>
+                <constraint firstAttribute="bottom" secondItem="qpG-xz-rmF" secondAttribute="bottom" constant="15" id="TVB-Kk-FnO"/>
+                <constraint firstItem="tmo-My-PMC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="aWo-ud-ahr"/>
+                <constraint firstItem="tmo-My-PMC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="eTV-4O-iEp"/>
+                <constraint firstAttribute="trailing" secondItem="DIO-nn-ba5" secondAttribute="trailing" id="j3S-nn-ewr"/>
+                <constraint firstAttribute="bottom" secondItem="S1t-e6-Sv3" secondAttribute="bottom" constant="15" id="mxP-dT-M92"/>
+                <constraint firstAttribute="bottom" secondItem="DIO-nn-ba5" secondAttribute="bottom" id="wO7-xd-dbg"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="UbP-6h-jWY"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="cellFollowClickIcon" width="19" height="20"/>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>

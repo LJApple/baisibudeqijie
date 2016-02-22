@@ -17,11 +17,14 @@
 		571529921C72B434005F7107 /* LJRecommentCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 571529911C72B434005F7107 /* LJRecommentCategory.m */; };
 		571529971C72B992005F7107 /* LJCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 571529951C72B992005F7107 /* LJCategoryTableViewCell.m */; };
 		571529981C72B992005F7107 /* LJCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571529961C72B992005F7107 /* LJCategoryTableViewCell.xib */; };
+		571E3E941C7AE44B00B0F5DD /* LJShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571E3E921C7AE44B00B0F5DD /* LJShowPictureViewController.m */; };
+		571E3E951C7AE44B00B0F5DD /* LJShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571E3E931C7AE44B00B0F5DD /* LJShowPictureViewController.xib */; };
 		5766BFF01C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766BFEF1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m */; };
 		5766BFF31C74B252003EF8C1 /* LJRecomendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766BFF21C74B252003EF8C1 /* LJRecomendTags.m */; };
 		5766BFF71C74B64B003EF8C1 /* LJRecomentTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766BFF51C74B64B003EF8C1 /* LJRecomentTagsCell.m */; };
 		5766BFF81C74B64B003EF8C1 /* LJRecomentTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5766BFF61C74B64B003EF8C1 /* LJRecomentTagsCell.xib */; };
 		5771676A1C731A6B00BB62EB /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 577167691C731A6B00BB62EB /* Foundation+Log.m */; };
+		579800831C79E53C005DFB12 /* LJProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 579800821C79E53C005DFB12 /* LJProgressView.m */; };
 		579A67A61C7835950078F80F /* LJTopics.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67A51C7835950078F80F /* LJTopics.m */; };
 		579A67AC1C785B110078F80F /* LJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67AB1C785B110078F80F /* LJConst.m */; };
 		579A67B01C786A550078F80F /* LJTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67AE1C786A550078F80F /* LJTopicCell.m */; };
@@ -87,6 +90,9 @@
 		571529941C72B992005F7107 /* LJCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCategoryTableViewCell.h; sourceTree = "<group>"; };
 		571529951C72B992005F7107 /* LJCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCategoryTableViewCell.m; sourceTree = "<group>"; };
 		571529961C72B992005F7107 /* LJCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		571E3E911C7AE44B00B0F5DD /* LJShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJShowPictureViewController.h; sourceTree = "<group>"; };
+		571E3E921C7AE44B00B0F5DD /* LJShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJShowPictureViewController.m; sourceTree = "<group>"; };
+		571E3E931C7AE44B00B0F5DD /* LJShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJShowPictureViewController.xib; sourceTree = "<group>"; };
 		5766BFEE1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJRecomendTagsTableViewController.h; sourceTree = "<group>"; };
 		5766BFEF1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJRecomendTagsTableViewController.m; sourceTree = "<group>"; };
 		5766BFF11C74B252003EF8C1 /* LJRecomendTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJRecomendTags.h; path = baisibudejie/Classes/Essence/Controller/LJRecomendTags.h; sourceTree = SOURCE_ROOT; };
@@ -95,6 +101,8 @@
 		5766BFF51C74B64B003EF8C1 /* LJRecomentTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJRecomentTagsCell.m; path = baisibudejie/Classes/Essence/Controller/LJRecomentTagsCell.m; sourceTree = SOURCE_ROOT; };
 		5766BFF61C74B64B003EF8C1 /* LJRecomentTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJRecomentTagsCell.xib; path = baisibudejie/Classes/Essence/Controller/LJRecomentTagsCell.xib; sourceTree = SOURCE_ROOT; };
 		577167691C731A6B00BB62EB /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		579800811C79E53C005DFB12 /* LJProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJProgressView.h; path = baisibudejie/Classes/Essence/Controller/LJProgressView.h; sourceTree = SOURCE_ROOT; };
+		579800821C79E53C005DFB12 /* LJProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJProgressView.m; path = baisibudejie/Classes/Essence/Controller/LJProgressView.m; sourceTree = SOURCE_ROOT; };
 		579A67A41C7835950078F80F /* LJTopics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJTopics.h; path = baisibudejie/Classes/Essence/Controller/LJTopics.h; sourceTree = SOURCE_ROOT; };
 		579A67A51C7835950078F80F /* LJTopics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJTopics.m; path = baisibudejie/Classes/Essence/Controller/LJTopics.m; sourceTree = SOURCE_ROOT; };
 		579A67AA1C785B110078F80F /* LJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJConst.h; sourceTree = "<group>"; };
@@ -111,9 +119,9 @@
 		579A67BB1C7996D60078F80F /* LJTopicPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJTopicPicture.h; path = baisibudejie/Classes/Essence/Controller/LJTopicPicture.h; sourceTree = SOURCE_ROOT; };
 		579A67BC1C7996D60078F80F /* LJTopicPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJTopicPicture.m; path = baisibudejie/Classes/Essence/Controller/LJTopicPicture.m; sourceTree = SOURCE_ROOT; };
 		579A67BE1C7996E60078F80F /* LJTopicPicture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJTopicPicture.xib; path = baisibudejie/Classes/Essence/Controller/LJTopicPicture.xib; sourceTree = SOURCE_ROOT; };
-		57D067EE1C72C50900219C23 /* baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		57D067EF1C72C50900219C23 /* baisibudejieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		57D067F01C72C50900219C23 /* baisibudejieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D067EE1C72C50900219C23 /* baisibudejiesibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejiesibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D067EF1C72C50900219C23 /* baisibudejiesibudejie.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejiesibudejie.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D067F01C72C50900219C23 /* baisibudejiesibudejie.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejiesibudejie.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DC779E1C742DB50019A4DA /* LJUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJUserTableViewCell.h; sourceTree = "<group>"; };
 		57DC779F1C742DB50019A4DA /* LJUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJUserTableViewCell.m; sourceTree = "<group>"; };
 		57DC77A01C742DB50019A4DA /* LJUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJUserTableViewCell.xib; sourceTree = "<group>"; };
@@ -197,9 +205,9 @@
 				57DDCE791C6F711B00AD3331 /* baisibudejieUITests */,
 				91518BB48D0C0DA2343E6309 /* Pods */,
 				3F2D14C24EF50F7C239FF99E /* Frameworks */,
-				57D067EE1C72C50900219C23 /* baisibudejie.app */,
-				57D067EF1C72C50900219C23 /* baisibudejieTests.xctest */,
-				57D067F01C72C50900219C23 /* baisibudejieUITests.xctest */,
+				57D067EE1C72C50900219C23 /* baisibudejiesibudejie.app */,
+				57D067EF1C72C50900219C23 /* baisibudejiesibudejie.xctest */,
+				57D067F01C72C50900219C23 /* baisibudejiesibudejie.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +278,9 @@
 				5766BFEF1C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m */,
 				579A67B81C794C240078F80F /* LJTopicView.h */,
 				579A67B91C794C240078F80F /* LJTopicView.m */,
+				571E3E911C7AE44B00B0F5DD /* LJShowPictureViewController.h */,
+				571E3E921C7AE44B00B0F5DD /* LJShowPictureViewController.m */,
+				571E3E931C7AE44B00B0F5DD /* LJShowPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +308,8 @@
 				579A67BB1C7996D60078F80F /* LJTopicPicture.h */,
 				579A67BC1C7996D60078F80F /* LJTopicPicture.m */,
 				579A67BE1C7996E60078F80F /* LJTopicPicture.xib */,
+				579800811C79E53C005DFB12 /* LJProgressView.h */,
+				579800821C79E53C005DFB12 /* LJProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -488,9 +501,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57DDCE511C6F711A00AD3331 /* baisibudejie */ = {
+		57DDCE511C6F711A00AD3331 /* baisibudejiesibudejie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57DDCE7F1C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejie" */;
+			buildConfigurationList = 57DDCE7F1C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejiesibudejie" */;
 			buildPhases = (
 				875C63AA927419D2394E935A /* Check Pods Manifest.lock */,
 				57DDCE4E1C6F711A00AD3331 /* Sources */,
@@ -503,14 +516,14 @@
 			);
 			dependencies = (
 			);
-			name = baisibudejie;
+			name = baisibudejiesibudejie;
 			productName = baisibudejie;
-			productReference = 57D067EE1C72C50900219C23 /* baisibudejie.app */;
+			productReference = 57D067EE1C72C50900219C23 /* baisibudejiesibudejie.app */;
 			productType = "com.apple.product-type.application";
 		};
-		57DDCE6A1C6F711B00AD3331 /* baisibudejieTests */ = {
+		57DDCE6A1C6F711B00AD3331 /* baisibudejiesibudejieTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57DDCE821C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejieTests" */;
+			buildConfigurationList = 57DDCE821C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejiesibudejieTests" */;
 			buildPhases = (
 				57DDCE671C6F711B00AD3331 /* Sources */,
 				57DDCE681C6F711B00AD3331 /* Frameworks */,
@@ -521,14 +534,14 @@
 			dependencies = (
 				57DDCE6D1C6F711B00AD3331 /* PBXTargetDependency */,
 			);
-			name = baisibudejieTests;
+			name = baisibudejiesibudejieTests;
 			productName = baisibudejieTests;
-			productReference = 57D067EF1C72C50900219C23 /* baisibudejieTests.xctest */;
+			productReference = 57D067EF1C72C50900219C23 /* baisibudejiesibudejie.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		57DDCE751C6F711B00AD3331 /* baisibudejieUITests */ = {
+		57DDCE751C6F711B00AD3331 /* baisibudejiesibudejieUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57DDCE851C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejieUITests" */;
+			buildConfigurationList = 57DDCE851C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejiesibudejieUITests" */;
 			buildPhases = (
 				57DDCE721C6F711B00AD3331 /* Sources */,
 				57DDCE731C6F711B00AD3331 /* Frameworks */,
@@ -539,9 +552,9 @@
 			dependencies = (
 				57DDCE781C6F711B00AD3331 /* PBXTargetDependency */,
 			);
-			name = baisibudejieUITests;
+			name = baisibudejiesibudejieUITests;
 			productName = baisibudejieUITests;
-			productReference = 57D067F01C72C50900219C23 /* baisibudejieUITests.xctest */;
+			productReference = 57D067F01C72C50900219C23 /* baisibudejiesibudejie.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -583,9 +596,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57DDCE511C6F711A00AD3331 /* baisibudejie */,
-				57DDCE6A1C6F711B00AD3331 /* baisibudejieTests */,
-				57DDCE751C6F711B00AD3331 /* baisibudejieUITests */,
+				57DDCE511C6F711A00AD3331 /* baisibudejiesibudejie */,
+				57DDCE6A1C6F711B00AD3331 /* baisibudejiesibudejieTests */,
+				57DDCE751C6F711B00AD3331 /* baisibudejiesibudejieUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -599,6 +612,7 @@
 				57EB3E5A1C70E51100325104 /* LJFriendTrendsViewController.xib in Resources */,
 				57DDCE621C6F711B00AD3331 /* Assets.xcassets in Resources */,
 				571006841C75B76F00EDAE20 /* LJLoginRigsterViewController.xib in Resources */,
+				571E3E951C7AE44B00B0F5DD /* LJShowPictureViewController.xib in Resources */,
 				579A67BF1C7996E60078F80F /* LJTopicPicture.xib in Resources */,
 				5710068F1C76C62D00EDAE20 /* LJPushGuide.xib in Resources */,
 				5766BFF81C74B64B003EF8C1 /* LJRecomentTagsCell.xib in Resources */,
@@ -694,6 +708,7 @@
 				57EB3E4C1C70AAC400325104 /* UIBarButtonItem+LJExtension.m in Sources */,
 				57EB3E4D1C70AAC400325104 /* UIView+LJExtension.m in Sources */,
 				5766BFF31C74B252003EF8C1 /* LJRecomendTags.m in Sources */,
+				579800831C79E53C005DFB12 /* LJProgressView.m in Sources */,
 				5766BFF71C74B64B003EF8C1 /* LJRecomentTagsCell.m in Sources */,
 				579A67B71C78CCD30078F80F /* UIButton+LJExtension.m in Sources */,
 				5771676A1C731A6B00BB62EB /* Foundation+Log.m in Sources */,
@@ -702,6 +717,7 @@
 				579A67BA1C794C240078F80F /* LJTopicView.m in Sources */,
 				571529921C72B434005F7107 /* LJRecommentCategory.m in Sources */,
 				579A67A61C7835950078F80F /* LJTopics.m in Sources */,
+				571E3E941C7AE44B00B0F5DD /* LJShowPictureViewController.m in Sources */,
 				57DC77A51C7432670019A4DA /* LJUserRecomendModel.m in Sources */,
 				5710068D1C76C5F500EDAE20 /* LJPushGuide.m in Sources */,
 				5766BFF01C74A0EF003EF8C1 /* LJRecomendTagsTableViewController.m in Sources */,
@@ -732,12 +748,12 @@
 /* Begin PBXTargetDependency section */
 		57DDCE6D1C6F711B00AD3331 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 57DDCE511C6F711A00AD3331 /* baisibudejie */;
+			target = 57DDCE511C6F711A00AD3331 /* baisibudejiesibudejie */;
 			targetProxy = 57DDCE6C1C6F711B00AD3331 /* PBXContainerItemProxy */;
 		};
 		57DDCE781C6F711B00AD3331 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 57DDCE511C6F711A00AD3331 /* baisibudejie */;
+			target = 57DDCE511C6F711A00AD3331 /* baisibudejiesibudejie */;
 			targetProxy = 57DDCE771C6F711B00AD3331 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -834,7 +850,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lvjun.baisibudejie;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = baisibudejiesibudejie;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -850,7 +866,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lvjun.baisibudejie;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = baisibudejiesibudejie;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -862,8 +878,8 @@
 				INFOPLIST_FILE = baisibudejieTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lvjun.baisibudejieTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/baisibudejie.app/baisibudejie";
+				PRODUCT_NAME = baisibudejiesibudejie;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/baisibudejiesibudejie.app/baisibudejiesibudejie";
 			};
 			name = Debug;
 		};
@@ -874,8 +890,8 @@
 				INFOPLIST_FILE = baisibudejieTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lvjun.baisibudejieTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/baisibudejie.app/baisibudejie";
+				PRODUCT_NAME = baisibudejiesibudejie;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/baisibudejiesibudejie.app/baisibudejiesibudejie";
 			};
 			name = Release;
 		};
@@ -885,7 +901,7 @@
 				INFOPLIST_FILE = baisibudejieUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lvjun.baisibudejieUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = baisibudejiesibudejie;
 				TEST_TARGET_NAME = baisibudejie;
 				USES_XCTRUNNER = YES;
 			};
@@ -897,7 +913,7 @@
 				INFOPLIST_FILE = baisibudejieUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lvjun.baisibudejieUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = baisibudejiesibudejie;
 				TEST_TARGET_NAME = baisibudejie;
 				USES_XCTRUNNER = YES;
 			};
@@ -915,7 +931,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57DDCE7F1C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejie" */ = {
+		57DDCE7F1C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejiesibudejie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57DDCE801C6F711B00AD3331 /* Debug */,
@@ -924,7 +940,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57DDCE821C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejieTests" */ = {
+		57DDCE821C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejiesibudejieTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57DDCE831C6F711B00AD3331 /* Debug */,
@@ -933,7 +949,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57DDCE851C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejieUITests" */ = {
+		57DDCE851C6F711B00AD3331 /* Build configuration list for PBXNativeTarget "baisibudejiesibudejieUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57DDCE861C6F711B00AD3331 /* Debug */,

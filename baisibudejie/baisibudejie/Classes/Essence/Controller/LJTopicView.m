@@ -87,7 +87,6 @@ static NSString *const LJTopicID = @"topic";
 - (void)loadNewTopic
 {
     [self.tableView.mj_footer endRefreshing];
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
     self.page = 0;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -96,7 +95,6 @@ static NSString *const LJTopicID = @"topic";
     params[@"type"] = @(self.type);
     self.params = params;
     [[AFHTTPSessionManager manager] POST:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [SVProgressHUD dismiss];
         // 获取模型数据
         
         self.topics = [LJTopics mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];

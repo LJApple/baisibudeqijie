@@ -21,3 +21,8 @@ UIKIT_EXTERN CGFloat const LJTopicMarigin;
 UIKIT_EXTERN CGFloat const LJTopicCellBottomH;
 /** 用户文字的Y*/
 UIKIT_EXTERN CGFloat const LJTopicCellTextY;
+
+/** 精华帖子中的最大高度*/
+UIKIT_EXTERN CGFloat const LJTopicCellPictureH;
+/** 精华－帖子超过后这是的高度*/
+UIKIT_EXTERN CGFloat const LJTopicCellImageH;
