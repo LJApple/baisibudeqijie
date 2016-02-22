@@ -51,4 +51,7 @@
 @property (nonatomic, assign, readonly) CGRect pictureF;
 /** 是否超过规定的长度*/
 @property (nonatomic, assign, getter=isAutoNumberImage) BOOL  autoNumberImage;
+/** 图片下载进度*/
+@property (nonatomic, assign) CGFloat  pictureProgress;
+
 @end

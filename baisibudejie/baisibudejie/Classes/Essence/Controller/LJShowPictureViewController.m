@@ -10,10 +10,12 @@
 #import "LJTopics.h"
 #import  <UIImageView+WebCache.h>
 #import <SVProgressHUD.h>
+#import "LJProgressView.h"
 
 @interface LJShowPictureViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) UIImageView *imageView;
+@property (nonatomic, weak) LJProgressView *pictureClickProgress;
 
 @end
 
@@ -46,7 +48,13 @@
     }
     
     // 加载数据
-    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.largeImage]];
+    [self.pictureClickProgress setProgress:self.topic.pictureProgress animated:NO];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.largeImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        self.topic.pictureProgress = 1.0 * receivedSize / expectedSize ;
+        [self.pictureClickProgress setProgress:self.topic.pictureProgress animated:YES];
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.pictureClickProgress.hidden = YES;
+    }];
 }
 
 - (IBAction)back
@@ -55,11 +63,15 @@
 }
 
 - (IBAction)save {
+    if (self.imageView.image == nil) {
+        [SVProgressHUD showErrorWithStatus:@"图片没有下载完毕"];
+        return;
+    }
     // 将图片写入相册
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
-{
+{hang
     if (error) {
         [SVProgressHUD showErrorWithStatus:@"保存失败"];
     } else {

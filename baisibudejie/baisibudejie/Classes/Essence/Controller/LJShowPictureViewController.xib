@@ -22,6 +22,14 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="cellFollowClickIcon" translatesAutoresizingMaskIntoConstraints="NO" id="UbP-6h-jWY">
                     <rect key="frame" x="401" y="495" width="19" height="20"/>
                 </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcV-12-BGU" customClass="LJProgressView">
+                    <rect key="frame" x="250" y="250" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="OOs-YU-e4M"/>
+                        <constraint firstAttribute="width" constant="100" id="ZsK-zn-9qP"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmo-My-PMC">
                     <rect key="frame" x="15" y="25" width="35" height="40"/>
                     <constraints>
@@ -66,8 +74,10 @@
                 <constraint firstItem="DIO-nn-ba5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="46F-ch-pSh"/>
                 <constraint firstItem="DIO-nn-ba5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="COK-ba-BVA"/>
                 <constraint firstItem="qpG-xz-rmF" firstAttribute="leading" secondItem="S1t-e6-Sv3" secondAttribute="trailing" constant="20" id="NzC-y1-c7S"/>
+                <constraint firstItem="UcV-12-BGU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="QO7-Du-xLE"/>
                 <constraint firstAttribute="trailing" secondItem="qpG-xz-rmF" secondAttribute="trailing" constant="15" id="T8w-Cg-dl5"/>
                 <constraint firstAttribute="bottom" secondItem="qpG-xz-rmF" secondAttribute="bottom" constant="15" id="TVB-Kk-FnO"/>
+                <constraint firstItem="UcV-12-BGU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YtM-QJ-WpC"/>
                 <constraint firstItem="tmo-My-PMC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="aWo-ud-ahr"/>
                 <constraint firstItem="tmo-My-PMC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="eTV-4O-iEp"/>
                 <constraint firstAttribute="trailing" secondItem="DIO-nn-ba5" secondAttribute="trailing" id="j3S-nn-ewr"/>

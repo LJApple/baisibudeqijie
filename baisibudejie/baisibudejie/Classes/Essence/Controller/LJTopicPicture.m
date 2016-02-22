@@ -53,11 +53,12 @@
 {
     _topic = topic;
     
+    [self.progressView setProgress:topic.pictureProgress animated:NO];
     // 设置图片
-    
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:topic.largeImage] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.progressView.hidden = NO;
-        [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:YES];
+        topic.pictureProgress = 1.0 * receivedSize / expectedSize;
+        [self.progressView setProgress:topic.pictureProgress animated:YES];
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
     }];
