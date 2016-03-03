@@ -31,17 +31,29 @@
 /** 是否是新浪注册用户*/
 @property (nonatomic, assign, getter=isSina_v) BOOL sina_v ;
 /** 小图*/
-@property (nonatomic, strong) NSString * smallImage;
+@property (nonatomic, copy) NSString * smallImage;
 /** 大图*/
-@property (nonatomic, strong) NSString * largeImage;
+@property (nonatomic, copy) NSString * largeImage;
 /** 中图*/
-@property (nonatomic, strong) NSString * middleImage;
+@property (nonatomic, copy) NSString * middleImage;
 /** 图片的高度*/
 @property (nonatomic, assign) CGFloat  height;
 /** 图片的宽度*/
 @property (nonatomic, assign) CGFloat  width;
 /** 帖子类型属性*/
 @property (nonatomic, assign) LJTopicType type;
+
+/** 声音音频长度*/
+@property (nonatomic, assign) NSInteger voicetime;
+/** 声音的播放次数*/
+@property (nonatomic, assign) NSInteger playcount;
+/** 视频加载时静态的地址*/
+@property (nonatomic, copy) NSString * cdn_img;
+/** 视频播放的次数*/
+@property (nonatomic, assign) NSInteger playfcount;
+/** 视频播放的长度*/
+@property (nonatomic, assign) NSInteger videotime;
+
 
 
 /** 其它类型属性*/
@@ -53,5 +65,12 @@
 @property (nonatomic, assign, getter=isAutoNumberImage) BOOL  autoNumberImage;
 /** 图片下载进度*/
 @property (nonatomic, assign) CGFloat  pictureProgress;
+
+/** 声音的Frame*/
+@property (nonatomic, assign, readonly) CGRect voiceF;
+
+/** 视频的frame*/
+@property (nonatomic, assign, readonly) CGRect videoF;
+
 
 @end

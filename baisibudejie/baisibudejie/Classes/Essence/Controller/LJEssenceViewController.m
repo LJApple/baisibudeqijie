@@ -83,7 +83,7 @@
     titleView.width = self.view.width;
     titleView.height = LJTitilesViewH;
     titleView.y = LJTitilesViewY;
-    titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
     [self.view addSubview:titleView];
     self.titleView = titleView;
     // 底部的红色指示器

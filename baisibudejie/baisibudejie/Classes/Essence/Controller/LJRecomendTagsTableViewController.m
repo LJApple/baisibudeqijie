@@ -54,7 +54,6 @@ static NSString * const LJRecomendTagID = @"tags";
     params[@"c"] = @"topic";
     params[@"action"] = @"sub";
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
         // 字典转模型数据
         self.tags = [LJRecomendTags mj_objectArrayWithKeyValuesArray:responseObject];
         [self.tableView reloadData];

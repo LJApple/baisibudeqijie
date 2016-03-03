@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface LJRecomendTags : NSObject
-/** 图片路劲*/
+/** 图片路径*/
 @property (nonatomic, copy) NSString * image_list;
 
 /** 订阅数*/

@@ -9,10 +9,14 @@
 #import "LJTopics.h"
 // #import <MJExtension.h>
 
+/** 文字的最大尺寸*/
+#define maxSize CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * LJTopicMarigin, MAXFLOAT)
+/** 计算文字的高度*/
+#define textH  [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height
+
 @implementation LJTopics
 {
     CGFloat _cellHeight;
-    CGRect _pictureF;
 }
 
 - (NSString *)create_time
@@ -82,31 +86,36 @@
 - (CGFloat)cellHeight
 {
     if (!_cellHeight) {
-       
-       
-        // 文字最大尺寸
-        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * LJTopicMarigin, MAXFLOAT) ;
-        // 计算文字的高度
-        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
-        
         // 计算图片的高度
         _cellHeight = LJTopicCellTextY + textH + LJTopicCellBottomH + 2 * LJTopicMarigin;
         
         // 根据类型计算图片的高度
         if (self.type == LJTopicTypePicture) {
-            CGFloat pictureW = maxSize.width;
-            CGFloat pictureH = pictureW * self.height / self.width;
-            if (pictureH > LJTopicCellPictureH) {
-                pictureH = LJTopicCellImageH;
-                self.autoNumberImage = YES;
-            }
-            _cellHeight += pictureH + LJTopicMarigin;
-            
-            CGFloat pictureX = LJTopicMarigin;
-            CGFloat pictureY = LJTopicCellTextY + textH + LJTopicMarigin;
-            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            _pictureF = self.setFrame;
+        } else if (self.type == LJTopicTypeVoice){
+            _voiceF = self.setFrame;
+        } else if (self.type == LJTopicTypeVideo){
+            _voiceF = self.setFrame;
         }
 }
     return _cellHeight;
+}
+
+- (CGRect)setFrame
+{
+    CGFloat width = maxSize.width;
+    CGFloat height = width * self.height / self.width;
+    if (height > LJTopicCellPictureH) {
+        height = LJTopicCellImageH;
+        self.autoNumberImage = YES;
+    }
+
+    _cellHeight += height + LJTopicMarigin;
+    
+    // 设置frame
+    CGFloat x = LJTopicMarigin;
+    CGFloat y = LJTopicCellTextY + textH + LJTopicMarigin;
+    
+    return CGRectMake(x, y, width, height);
 }
 @end
