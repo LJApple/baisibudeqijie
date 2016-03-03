@@ -7,6 +7,7 @@
 //
 
 #import "LJTabBar.h"
+#import "LJPublishView.h"
 
 @interface LJTabBar ()
 
@@ -29,6 +30,10 @@
         publishButton.size = publishButton.currentBackgroundImage.size;
         [self addSubview:publishButton];
         self.publishButton = publishButton;
+        
+        // 给发布按钮添加监听器
+        [publishButton addTarget:self action:@selector(publishViewButton) forControlEvents:UIControlEventTouchUpInside];
+        
     }
     return self;
 }
@@ -60,6 +65,22 @@
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         index++;
         }
+}
+
+//UIWindow *window;
+- (void)publishViewButton
+{
+//    LJPublishView *pv = [LJPublishView publishView];
+//    UIWindow *windows = [UIApplication sharedApplication].keyWindow;
+//    pv.frame = windows.bounds;
+//    [windows.rootViewController.view addSubview:pv];
+//
+//    window = [[UIWindow alloc] init];
+//    window.frame = [UIScreen mainScreen].bounds;
+//    window.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.5];
+//    window.windowLevel = UIWindowLevelStatusBar;
+//    window.hidden = NO;
+    [LJPublishView show];
 }
 
 @end

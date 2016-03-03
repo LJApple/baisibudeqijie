@@ -62,6 +62,7 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
         
+        if (topic.isAutoNumberImage == NO) return ;
         
         // 开启上下文
         UIGraphicsBeginImageContextWithOptions(topic.pictureF.size, YES, 0.0);

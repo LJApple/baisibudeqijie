@@ -27,7 +27,7 @@
     self.imageView.x = 0;
     self.imageView.y = 0;
     self.imageView.width = self.width;
-    self.imageView.height = self.width;
+    self.imageView.height = self.imageView.width;
     
     // 调整文字
     self.titleLabel.x = 0;

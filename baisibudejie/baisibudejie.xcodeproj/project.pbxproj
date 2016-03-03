@@ -34,6 +34,8 @@
 		579A67BA1C794C240078F80F /* LJTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67B91C794C240078F80F /* LJTopicView.m */; };
 		579A67BD1C7996D60078F80F /* LJTopicPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A67BC1C7996D60078F80F /* LJTopicPicture.m */; };
 		579A67BF1C7996E60078F80F /* LJTopicPicture.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579A67BE1C7996E60078F80F /* LJTopicPicture.xib */; };
+		579A9D231C7C8BEA00A4DEE2 /* LJPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A9D221C7C8BEA00A4DEE2 /* LJPublishView.m */; };
+		579A9D251C7C8C0000A4DEE2 /* LJPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 579A9D241C7C8C0000A4DEE2 /* LJPublishView.xib */; };
 		57DC77A11C742DB50019A4DA /* LJUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC779F1C742DB50019A4DA /* LJUserTableViewCell.m */; };
 		57DC77A21C742DB50019A4DA /* LJUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57DC77A01C742DB50019A4DA /* LJUserTableViewCell.xib */; };
 		57DC77A51C7432670019A4DA /* LJUserRecomendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DC77A41C7432670019A4DA /* LJUserRecomendModel.m */; };
@@ -119,6 +121,9 @@
 		579A67BB1C7996D60078F80F /* LJTopicPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LJTopicPicture.h; path = baisibudejie/Classes/Essence/Controller/LJTopicPicture.h; sourceTree = SOURCE_ROOT; };
 		579A67BC1C7996D60078F80F /* LJTopicPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LJTopicPicture.m; path = baisibudejie/Classes/Essence/Controller/LJTopicPicture.m; sourceTree = SOURCE_ROOT; };
 		579A67BE1C7996E60078F80F /* LJTopicPicture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LJTopicPicture.xib; path = baisibudejie/Classes/Essence/Controller/LJTopicPicture.xib; sourceTree = SOURCE_ROOT; };
+		579A9D211C7C8BEA00A4DEE2 /* LJPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJPublishView.h; sourceTree = "<group>"; };
+		579A9D221C7C8BEA00A4DEE2 /* LJPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJPublishView.m; sourceTree = "<group>"; };
+		579A9D241C7C8C0000A4DEE2 /* LJPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJPublishView.xib; sourceTree = "<group>"; };
 		57D067EE1C72C50900219C23 /* baisibudejiesibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejiesibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067EF1C72C50900219C23 /* baisibudejiesibudejie.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejiesibudejie.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D067F01C72C50900219C23 /* baisibudejiesibudejie.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baisibudejiesibudejie.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -485,6 +490,9 @@
 				5710068B1C76C5F500EDAE20 /* LJPushGuide.h */,
 				5710068C1C76C5F500EDAE20 /* LJPushGuide.m */,
 				5710068E1C76C62D00EDAE20 /* LJPushGuide.xib */,
+				579A9D211C7C8BEA00A4DEE2 /* LJPublishView.h */,
+				579A9D221C7C8BEA00A4DEE2 /* LJPublishView.m */,
+				579A9D241C7C8C0000A4DEE2 /* LJPublishView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -611,6 +619,7 @@
 				57EB3E5F1C70E8D100325104 /* LJRecommendViewController.xib in Resources */,
 				57EB3E5A1C70E51100325104 /* LJFriendTrendsViewController.xib in Resources */,
 				57DDCE621C6F711B00AD3331 /* Assets.xcassets in Resources */,
+				579A9D251C7C8C0000A4DEE2 /* LJPublishView.xib in Resources */,
 				571006841C75B76F00EDAE20 /* LJLoginRigsterViewController.xib in Resources */,
 				571E3E951C7AE44B00B0F5DD /* LJShowPictureViewController.xib in Resources */,
 				579A67BF1C7996E60078F80F /* LJTopicPicture.xib in Resources */,
@@ -693,6 +702,7 @@
 			files = (
 				57EB3E4F1C70AAC400325104 /* main.m in Sources */,
 				57EB3E481C70AAC400325104 /* LJFriendTrendsViewController.m in Sources */,
+				579A9D231C7C8BEA00A4DEE2 /* LJPublishView.m in Sources */,
 				5710068A1C76AC8600EDAE20 /* LJTextField.m in Sources */,
 				57EB3E501C70AAC400325104 /* LJTabBar.m in Sources */,
 				57EB3E4A1C70AAC400325104 /* LJNewViewController.m in Sources */,
